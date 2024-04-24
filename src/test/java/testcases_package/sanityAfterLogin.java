@@ -14,7 +14,7 @@ public class sanityAfterLogin extends Base_class {
 
 
 
-	@Test(enabled = false) // Try Now 1
+	@Test(priority = 1) // Try Now 1
 	void verify_try_now_button_is_functional() throws Exception  {
 		driver.get(url2); //v3	
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));
@@ -42,7 +42,7 @@ public class sanityAfterLogin extends Base_class {
 	
 	
 	
-	@Test(enabled = false) // Try Now 2
+	@Test(priority = 2) // Try Now 2
 	void verify_try_now_button_is_functional2() throws Exception  {
 		driver.get(url2); //v3	
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[2]")));
@@ -69,7 +69,7 @@ public class sanityAfterLogin extends Base_class {
 	
 	
 
-	@Test(enabled = false) // verify dropdown values - Static Residential Proxies	
+	@Test(priority = 3) // verify dropdown values - Static Residential Proxies	
 	void verify_dropdown_values_Static_Residential_Proxies() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[text()='Static Residential Proxies']")));
@@ -101,7 +101,7 @@ public class sanityAfterLogin extends Base_class {
         }
 	}	
 	
-	@Test(enabled = false) // verify dropdown values - Dedicated Datacenter Proxies	
+	@Test(priority = 4) // verify dropdown values - Dedicated Datacenter Proxies	
 	void verify_dropdown_values_Dedicated_Datacenter_Proxies() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[text()='Dedicated Datacenter Proxies']")));
@@ -135,7 +135,7 @@ public class sanityAfterLogin extends Base_class {
 	
 	
 	
-	@Test(enabled = false) // verify dropdown values - Shared Datacenter	
+	@Test(priority = 5) // verify dropdown values - Shared Datacenter	
 	void verify_dropdown_values_Shared_Datacenter() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[text()='Dedicated Datacenter Proxies']")));
@@ -170,7 +170,7 @@ public class sanityAfterLogin extends Base_class {
 	
 
 	
-	@Test(priority = 5) // verify dropdown navigate to my proxies page
+	@Test(priority = 6) // verify dropdown navigate to my proxies page
 	void verify_dropdown_navigate_to_my_proxies_page() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
@@ -192,7 +192,7 @@ public class sanityAfterLogin extends Base_class {
 	}
 	
 	
-	@Test(priority = 6) // verify dropdown navigate to my profile
+	@Test(priority = 7) // verify dropdown navigate to my profile
 	void verify_dropdown_navigate_to_my_profile() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
@@ -214,7 +214,7 @@ public class sanityAfterLogin extends Base_class {
 	
 	}
 	
-	@Test(priority = 7) // verify dropdown navigate to my payment method
+	@Test(priority = 8) // verify dropdown navigate to my payment method
 	void verify_dropdown_navigate_to_my_Payment_method() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
