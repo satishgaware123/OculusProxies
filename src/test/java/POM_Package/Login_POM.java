@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_POM {
-/////
+
 	WebDriver  Localdriver;
 	
 	public Login_POM(WebDriver remotedriver) 
