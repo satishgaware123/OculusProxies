@@ -1,11 +1,6 @@
 package testcases_package;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class sanityAfterLogin extends Base_class {
 
@@ -35,7 +29,7 @@ public class sanityAfterLogin extends Base_class {
 		
 	   try {
   
-			AssertJUnit.assertEquals( curentTXT,expectedTXT);
+			Assert.assertEquals( curentTXT,expectedTXT);
 			   
 		   }
 	   catch (Exception e) 
@@ -63,7 +57,7 @@ public class sanityAfterLogin extends Base_class {
 		
 	   try {
   
-			AssertJUnit.assertEquals( curentTXT,expectedTXT);
+			Assert.assertEquals( curentTXT,expectedTXT);
 			   
 		   }
 	   catch (Exception e) 
