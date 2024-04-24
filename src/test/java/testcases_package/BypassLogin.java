@@ -18,7 +18,7 @@ import java.io.IOException;
 
 public class BypassLogin extends Base_class{
 
-	
+	// this class is used for storing Local storage for next testing
 
     public static void main(String[] args) throws InterruptedException, IOException {
         System.out.println(" ============ Starting Session Management Tests ===============\n\n");
