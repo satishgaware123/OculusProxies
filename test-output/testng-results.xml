@@ -1,97 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+<testng-results ignored="7" total="7" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-23T17:50:04 IST" name="Default suite" finished-at="2024-04-23T17:50:30 IST" duration-ms="26648">
+  <suite started-at="2024-04-24T11:45:44 IST" name="Default suite" finished-at="2024-04-24T11:45:44 IST" duration-ms="9">
     <groups>
     </groups>
-    <test started-at="2024-04-23T17:50:04 IST" name="Default test" finished-at="2024-04-23T17:50:30 IST" duration-ms="26648">
-      <class name="testcases_package.sanityAfterLogin">
-        <test-method is-config="true" signature="start_bowser(java.lang.String)[pri:0, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:04 IST" name="start_bowser" finished-at="2024-04-23T17:50:16 IST" duration-ms="12796" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- start_bowser -->
-        <test-method signature="verify_try_now_button_is_functional()[pri:1, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:16 IST" name="verify_try_now_button_is_functional" finished-at="2024-04-23T17:50:18 IST" duration-ms="1102" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_try_now_button_is_functional -->
-        <test-method signature="verify_try_now_button_is_functional2()[pri:2, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:18 IST" name="verify_try_now_button_is_functional2" finished-at="2024-04-23T17:50:18 IST" duration-ms="896" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_try_now_button_is_functional2 -->
-        <test-method signature="verify_dropdown_values_Static_Residential_Proxies()[pri:3, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:18 IST" name="verify_dropdown_values_Static_Residential_Proxies" finished-at="2024-04-23T17:50:21 IST" duration-ms="2715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_dropdown_values_Static_Residential_Proxies -->
-        <test-method signature="verify_dropdown_values_Dedicated_Datacenter_Proxies()[pri:4, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:21 IST" name="verify_dropdown_values_Dedicated_Datacenter_Proxies" finished-at="2024-04-23T17:50:24 IST" duration-ms="3221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_dropdown_values_Dedicated_Datacenter_Proxies -->
-        <test-method signature="verify_dropdown_values_Shared_Datacenter()[pri:5, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:24 IST" name="verify_dropdown_values_Shared_Datacenter" finished-at="2024-04-23T17:50:29 IST" duration-ms="4906" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_dropdown_values_Shared_Datacenter -->
-        <test-method signature="verify_right_side_dropdown()[pri:5, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:29 IST" name="verify_right_side_dropdown" finished-at="2024-04-23T17:50:30 IST" duration-ms="819" status="FAIL">
-          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
-            <message>
-              <![CDATA[Element should have been "select" but was "a"
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'hp-H310B', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-39-generic', java.version: '17.0.9'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "a"
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'hp-H310B', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-39-generic', java.version: '17.0.9'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:48)
-at testcases_package.sanityAfterLogin.verify_right_side_dropdown(sanityAfterLogin.java:191)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_right_side_dropdown -->
-        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:testcases_package.sanityAfterLogin@1d119efb]" started-at="2024-04-23T17:50:30 IST" name="Close_Browser" finished-at="2024-04-23T17:50:30 IST" duration-ms="144" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Close_Browser -->
-      </class> <!-- testcases_package.sanityAfterLogin -->
+    <test started-at="2024-04-24T11:45:44 IST" name="Default test" finished-at="2024-04-24T11:45:44 IST" duration-ms="9">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
