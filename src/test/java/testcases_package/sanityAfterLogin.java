@@ -211,7 +211,7 @@ public class sanityAfterLogin extends Base_class {
 	    
 	    Assert.assertEquals(currentTXT, expectedTXT);
 	
-	
+	//
 	}
 	
 	@Test(priority = 8) // verify dropdown navigate to my payment method
