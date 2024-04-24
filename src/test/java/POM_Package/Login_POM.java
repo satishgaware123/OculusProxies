@@ -18,7 +18,7 @@ public class Login_POM {
 		Localdriver = remotedriver;
 		PageFactory.initElements(remotedriver,this);
 		
-	}//////
+	}
 	
 	@FindBy(how = How.XPATH, using="//input[@id='email']")
 	private WebElement email;     
