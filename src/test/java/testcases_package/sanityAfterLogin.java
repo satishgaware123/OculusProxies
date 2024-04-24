@@ -198,4 +198,30 @@ public class sanityAfterLogin extends Base_class {
 	
 	
 	}
+	
+	
+	@Test(priority = 6) // verify dropdown navigate to my proxies page
+	void verify_right_side_dropdown2() throws Exception  {
+		driver.get(url2);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
+	    
+		WebElement  StartNow  = driver.findElement(By.xpath("//a[@id='navbardropUser']"));
+		 StartNow.click();	    			
+		
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@id='profile'])[1]")));
+	
+		WebElement  dropdownElement  = driver.findElement(By.xpath("(//a[@id='profile'])[1]"));
+		Select dropdown = new Select(dropdownElement);
+		
+		
+		//String currentUrlString =  driver.getCurrentUrl();
+		WebElement  expectedelement  = driver.findElement(By.xpath("(//a[@id='profile'])[1]"));
+		String currentTXT= expectedelement.getText();
+	    String expectedTXT  = "My Profile";	
+	    
+	    Assert.assertEquals(currentTXT, expectedTXT);
+	
+	
+	}
 }
