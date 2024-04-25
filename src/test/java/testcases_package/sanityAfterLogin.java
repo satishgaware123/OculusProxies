@@ -14,7 +14,7 @@ public class sanityAfterLogin extends Base_class {
 
 
 
-	@Test(priority = 1) // Try Now 1
+	@Test(priority = 10) // Try Now 1
 	void verify_try_now_button_is_functional() throws Exception  {
 		driver.get(url2); //v3	
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));
@@ -211,7 +211,6 @@ public class sanityAfterLogin extends Base_class {
 	    
 	    Assert.assertEquals(currentTXT, expectedTXT);
 	
-	//
 	}
 	
 	@Test(priority = 8) // verify dropdown navigate to my payment method
@@ -236,5 +235,139 @@ public class sanityAfterLogin extends Base_class {
 	
 	
 	}
+	
+
+	@Test(priority = 1) // verify dropdown navigate to my payment method
+	void Verify_that_the_ISP_product_has_been_successfully_purchased() throws Exception  {
+		
+		driver.get(url2);
+		
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Start Now '])[1]")));    
+		WebElement  Start_Now  = driver.findElement(By.xpath("(//button[text()=' Start Now '])[1]"));
+		Start_Now.click();	    					
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Buy now ']")));	
+		WebElement  Buy_now  = driver.findElement(By.xpath("//button[text()=' Buy now ']"));
+		Buy_now.click();		
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Pay Now ']")));		
+		WebElement  Pay_now  = driver.findElement(By.xpath("//button[text()=' Pay Now ']"));
+		Pay_now.click();		
+
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label//input[@type='checkbox']")));		
+		WebElement  AutoPayCheckBox  = driver.findElement(By.xpath("//label//input[@type='checkbox']"));
+		
+
+		if(AutoPayCheckBox.isSelected()) 
+		{
+			System.out.println("The auto-renew checkbox is selected by default.");
+		}
+		else
+		{
+			System.out.println("The auto-renew checkbox is not selected by default.");
+		}
+
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label//input[@type='radio']")));		
+		WebElement  select_card  = driver.findElement(By.xpath("//label//input[@type='radio']"));
+		
+		if(select_card.isSelected()) 
+		{
+			System.out.println("The redio button is selected by default.");
+		}
+		else
+		{
+			select_card.click();	
+
+		}
+
+
+        System.out.println("working......................1");
+        
+        // Wait for the iframe to be available
+      //  wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("(//iframe[@role='presentation'])[10]")));
+
+        try
+        
+        {
+        
+        	WebElement  cvcs  = driver.findElement(By.xpath("//iframe[@name='__privateStripeFrame41691']"));
+         	driver.switchTo().frame("__privateStripeFrame41691");
+		    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span//input[@placeholder='CVC' and @name='cvc']")));	
+	     	
+		  //span//input[@placeholder='CVC' and @name='cvc']
+		    
+		    WebElement  cvc  = driver.findElement(By.xpath("//span//input[@placeholder='CVC' and @name='cvc']"));
+		//cvc.click();
+		cvc.sendKeys("111");
+		   System.out.println("working......................2");     
+        }
+        catch (Exception e) 
+        {
+			System.out.println(e);
+		} 
+		Thread.sleep(5000);
+		WebElement  Pay  = driver.findElement(By.xpath("(//button[@type='button'])[4]"));
+		Pay.click();
+		Thread.sleep(5000);
+
+	}
+	
+
+	@Test(priority = -1) // verify dropdown navigate to my payment method
+	void Verify_Proxie_configuration_page_should_be_oppen() throws Exception  {
+		
+		driver.get(url2);
+		
+		
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));    
+		WebElement  Try_now  = driver.findElement(By.xpath("(//button[text()=' Try now '])[1]"));
+		Try_now.click();	    					
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[text()=' Configure '])[1]")));	
+		WebElement  Buy_now  = driver.findElement(By.xpath("(//span[text()=' Configure '])[1]"));
+		Buy_now.click();		
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='checkbox']")));		
+		WebElement  checkbox  = driver.findElement(By.xpath("//input[@type='checkbox']"));
+		
+		if(!checkbox.isSelected()) {
+			System.out.println("check box is diselected");
+		}
+		else {
+			System.out.println("check box is selected");
+		}
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@type='text']")));		
+		WebElement  text  = driver.findElement(By.xpath("//textarea[@type='text']"));
+		text.sendKeys("3.3.3.3");
+		
+		WebElement  Add  = driver.findElement(By.xpath("//button[text()=' Add ']"));
+		Add.click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=' 3.3.3.3 ']")));		
+		WebElement  textt  = driver.findElement(By.xpath("//div[text()=' 3.3.3.3 ']"));
+		String ip = textt.getText();
+		String expectedString  = "3.3.3.3";
+		
+		try {
+		Assert.assertEquals(ip, expectedString);
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+
+	
+		WebElement  Save_Generate  = driver.findElement(By.xpath("//button[text()=' Save & Generate ']"));
+		Save_Generate.click();
+
+
+
+
+	}
+	
+	
 	
 }

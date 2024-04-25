@@ -6,7 +6,7 @@
       <class name="testcases_package.sanityAfterLogin">
         <methods>
           <include name="Close_Browser"/>
-          <include name="verify_right_side_dropdown"/>
+          <include name="verify_dropdown_navigate_to_my_Payment_method"/>
           <include name="start_bowser"/>
         </methods>
       </class> <!-- testcases_package.sanityAfterLogin -->
