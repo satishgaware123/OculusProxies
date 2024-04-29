@@ -2,6 +2,7 @@ package testcases_package;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -16,7 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class Find_Broken_links_legasy extends Base_class {
+public class Find_Broken_links_legasy extends Base_class2 {
 	
 	public void findbrokenlinks(String urllink, WebElement singleLink) {
 	    try {
@@ -55,7 +56,7 @@ public class Find_Broken_links_legasy extends Base_class {
 
 
 	@Test(priority = 1)  // find broken links in legacy
-	void test001() throws Exception {
+	void find_broken_links_in_legacy() throws Exception {
 		
 		try {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -99,7 +100,7 @@ public class Find_Broken_links_legasy extends Base_class {
 	
 
 	@Test(priority = 2) // find broken links in v3
-	void test002() throws Exception {
+	void find_broken_links_in_v3() throws Exception {
 		
 		try {
 			int count = 0;
@@ -138,7 +139,7 @@ public class Find_Broken_links_legasy extends Base_class {
 	
 
 	@Test(priority = 3)  // find broken links in v4
-	void test003() throws Exception {
+	void find_broken_links_in_v4() throws Exception {
 		
 		try {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

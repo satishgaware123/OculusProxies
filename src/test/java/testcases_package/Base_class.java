@@ -41,17 +41,17 @@ public class Base_class {
 		{
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get(url);
+		driver.get(url2);
 		//get cookies 
 
-        SessionManager sessionManager = new SessionManager(driver);
+		SessionManager sessionManager = new SessionManager(driver);
 //       sessionManager.storeSessionFile("oculus","satish");
-        sessionManager.usePreviousLoggedInSession("oculus");
+		sessionManager.usePreviousLoggedInSession("oculus");
         
 //      Initialize WebDriverWait after WebDriver is instantiated
-        wait = new WebDriverWait(driver, 30);
+        wait = new WebDriverWait(driver, 20);
 		driver.manage().window().maximize();
-		  System.out.println(" ============ Starting Session Management Tests ===============\n\n");
+		System.out.println(" ============ Starting Session Management Tests ===============\n\n");
 
 		}
 		

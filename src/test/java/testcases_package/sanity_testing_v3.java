@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -14,15 +16,15 @@ import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-public class sanity_testing_v3 extends Base_class {
-
+public class sanity_testing_v3 extends Base_class2 {
+//Before Login
 	
 	@Test(enabled = false)
 	void test001() throws Exception  {
 		driver.navigate().refresh();
 		driver.get(url2); //v3
 		driver.navigate().refresh();
-		  System.out.println("testing strat...........................");
+		 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
 	    
 		WebElement dropdown = driver.findElement(By.xpath("//a[@href='/pricing']"));
@@ -43,8 +45,6 @@ public class sanity_testing_v3 extends Base_class {
 		   }
 	
 	}
-	
-	
 
 	@Test(enabled = false) // dropdown handle
 	void test002() throws Exception  {
@@ -151,22 +151,19 @@ public class sanity_testing_v3 extends Base_class {
 		///5
 
 				@Test(priority = 5) // Documentation
-				void test005() throws Exception  {
-					 System.out.println("testing strat...........................");
+				void test005() throws Exception  {					
 					driver.get(url2); //v3
-					System.out.println("testing strat...........................2");
+					
 				    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now for free '])[1]")));
 				    
 					WebElement Documentation = driver.findElement(By.xpath("(//button[text()=' Try now for free '])[1]"));
 					Documentation.click();	    		
 					//Thread.sleep(3000);
-					System.out.println("testing strat...........................3");
-					
-					
+		
 					WebElement header = driver.findElement(By.xpath("//div//h1[text()='Sign Up']"));
 					String curentTXT = header.getText();
 					String expectedTXT = "Sign Up";
-					System.out.println("testing strat...........................4");
+				
 				   try {
 			  
 						AssertJUnit.assertEquals( curentTXT,expectedTXT);
@@ -177,7 +174,6 @@ public class sanity_testing_v3 extends Base_class {
 						
 						System.out.println(e);
 					   }
-				   System.out.println("testing strat...........................5");
 				}	
 				
 				///6
