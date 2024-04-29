@@ -1,29 +1,18 @@
 package testcases_package;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
+
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.io.filefilter.FalseFileFilter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import groovyjarjarantlr4.v4.runtime.tree.xpath.XPath;
-
-public class sanity_Test_Before_Login extends Base_class{
+public class sanity_Test_Before_Login extends Base_class2{
 
 	
 	// for legacy
@@ -33,13 +22,13 @@ public class sanity_Test_Before_Login extends Base_class{
 	  
 	    WebDriverWait wait = new WebDriverWait(driver, 30);
 	    
-	    //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("pricing-dropdown")));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("pricing-dropdown")));
 	    
 		WebElement dropdown = driver.findElement(By.id("pricing-dropdown"));
 		dropdown.click();
 	    
 		Thread.sleep(2000);
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("//a[text()='Premium DC ISP Proxies']")));
 		WebElement Premium_DC_ISP_Proxies = driver.findElement(By.xpath("//a[text()='Premium DC ISP Proxies']"));
 		Premium_DC_ISP_Proxies.click();
 		
@@ -53,7 +42,7 @@ public class sanity_Test_Before_Login extends Base_class{
 		
 		    //SoftAssert softAssert = new SoftAssert(); 
 			//softAssert.assertEquals(actuaString, expectedString, "First soft assert failed");   
-			AssertJUnit.assertEquals(actuaString, expectedString);
+			Assert.assertEquals(actuaString, expectedString);
 			   
 		   }
 	   catch (Exception e) 
@@ -82,7 +71,7 @@ public class sanity_Test_Before_Login extends Base_class{
 	    
 	   try {
 	   
-			AssertJUnit.assertEquals(actuaString1, expectedString1);
+			Assert.assertEquals(actuaString1, expectedString1);
   
 	       } 
 	   catch (Exception e) 

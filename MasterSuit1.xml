@@ -6,7 +6,9 @@
 	
 </listeners>
 <suite-files>
-	<suite-file path="/home/hp/eclipse-workspace/OculusProxies/sanityAfterLogin.xml"></suite-file>
-
+	<suite-file path="/home/hp/git/repository3/sanityAfterLogin.xml"></suite-file>
+	<suite-file path="/home/hp/git/repository3/sanity_testing_v3.xml"></suite-file>
+	<suite-file path="/home/hp/git/repository3/Find_Broken_links_legasy.xml"></suite-file>
+	<suite-file path="/home/hp/git/repository3/sanity_Test_Before_Login.xml"></suite-file>
 </suite-files>
 </suite> <!-- master_suite -->

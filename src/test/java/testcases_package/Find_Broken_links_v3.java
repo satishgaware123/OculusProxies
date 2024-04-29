@@ -2,6 +2,7 @@ package testcases_package;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -19,11 +20,12 @@ import org.testng.annotations.Test;
 
 import com.github.dockerjava.api.model.Links;
 
-public class Find_Broken_links_v3 extends Base_class {
+public class Find_Broken_links_v3 extends Base_class2 {
 
-	
+
 	public void findbrokenlinks(String urllink, WebElement singleLink) {
-	    try {
+		 
+		try {
 	        if (urllink == null) {
 	            System.out.println("URL link is null for element: " + singleLink.getText());
 	            return;
@@ -58,7 +60,7 @@ public class Find_Broken_links_v3 extends Base_class {
 	
 	@Test(enabled = false)  // find single link
 	void test001() throws Exception {
-		
+//	/	driver.get(url3);
 		try {
 			
 			WebDriverWait wait = new WebDriverWait(driver,30000);
@@ -106,7 +108,7 @@ public class Find_Broken_links_v3 extends Base_class {
 	
 	@Test(priority = 1)
 	void test002() throws Exception {
-		
+	//	driver.get(url3);
 		try {
 			int count = 0;
 			WebDriverWait wait = new WebDriverWait(driver,30000);

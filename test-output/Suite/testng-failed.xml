@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="CrossBrowserTest2(failed)">
-    <parameter name="browser" value="Edge"/>
+  <listeners>
+    <listener class-name="Utilites_package.listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases_package.sanity_Test_Before_Login">
+      <class name="testcases_package.sanityAfterLogin">
         <methods>
           <include name="Close_Browser"/>
-          <include name="test001"/>
+          <include name="verify_dropdown_navigate_to_my_Payment_method"/>
           <include name="start_bowser"/>
         </methods>
-      </class> <!-- testcases_package.sanity_Test_Before_Login -->
+      </class> <!-- testcases_package.sanityAfterLogin -->
     </classes>
-  </test> <!-- CrossBrowserTest2(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
