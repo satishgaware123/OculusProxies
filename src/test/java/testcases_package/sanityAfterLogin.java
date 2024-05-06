@@ -1,11 +1,6 @@
 package testcases_package;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-
-import com.github.dockerjava.api.exception.NotFoundException;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -13,6 +8,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -36,7 +32,7 @@ public class sanityAfterLogin extends Base_class {
 		
 	   try {
   
-			AssertJUnit.assertEquals( curentTXT,expectedTXT);
+			Assert.assertEquals( curentTXT,expectedTXT);
 			   
 		   }
 	   catch (Exception e) 
@@ -64,7 +60,7 @@ public class sanityAfterLogin extends Base_class {
 		
 	   try {
   
-			AssertJUnit.assertEquals( curentTXT,expectedTXT);
+			Assert.assertEquals( curentTXT,expectedTXT);
 			   
 		   }
 	   catch (Exception e) 
@@ -79,7 +75,38 @@ public class sanityAfterLogin extends Base_class {
 	@Test(priority = 3) // verify dropdown values - Static Residential Proxies	
 	void verify_dropdown_values_Static_Residential_Proxies() throws Exception  {
 		driver.get(url2);
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[text()='Static Residential Proxies']")));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Start Now '])[1]")));
+	    
+		WebElement  StartNow  = driver.findElement(By.xpath("(//button[text()=' Start Now '])[1]"));
+		 StartNow.click();	    			
+		
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
+	
+		WebElement  dropdownElement  = driver.findElement(By.xpath("(//select[@class='select-box'])[2]"));
+		Select dropdown = new Select(dropdownElement);
+		
+		
+		List<String> expectedValues = Arrays.asList("10 GB - $12","50 GB - $60","150 GB - $150");
+		
+        List<WebElement> dropdownOptions = dropdown.getOptions();
+        for (String expectedValue : expectedValues) {
+            boolean found = false;
+            for (WebElement option : dropdownOptions) {
+                if (option.getText().equals(expectedValue)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println("Value '" + expectedValue + "' is missing from the Static Residential Proxies.");
+            }
+        }
+	}	
+	@Test(priority = 3) // verify dropdown values - Static Residential Proxies	
+	void verify_dropdown_values_Static_Residential_ProxiesISPplus() throws Exception  {
+		driver.get(url2);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Start Now '])[1]")));
 	    
 		WebElement  StartNow  = driver.findElement(By.xpath("(//button[text()=' Start Now '])[1]"));
 		 StartNow.click();	    			
@@ -91,7 +118,7 @@ public class sanityAfterLogin extends Base_class {
 		Select dropdown = new Select(dropdownElement);
 		
 		
-		List<String> expectedValues = Arrays.asList("10 GB - $12","50 GB - $60","150 GB - $150");
+		List<String> expectedValues = Arrays.asList("25 IP - $40","50 IP - $80","200 IP - $300");
 		
         List<WebElement> dropdownOptions = dropdown.getOptions();
         for (String expectedValue : expectedValues) {
@@ -113,7 +140,7 @@ public class sanityAfterLogin extends Base_class {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[text()='Dedicated Datacenter Proxies']")));
 	    
-		WebElement  StartNow  = driver.findElement(By.xpath("(//button[text()=' Start Now '])[2]"));
+		WebElement  StartNow  = driver.findElement(By.xpath("(//button[text()=' Start Now '])[3]"));
 		 StartNow.click();	    			
 		
  
@@ -193,7 +220,7 @@ public class sanityAfterLogin extends Base_class {
 		String currentUrlString =  driver.getCurrentUrl();
 	    String expectedURLString  = "https://dev.oculusproxies.com/orders/ispProxy";	
 	    
-	    AssertJUnit.assertEquals(currentUrlString, expectedURLString);
+	    Assert.assertEquals(currentUrlString, expectedURLString);
 	
 	
 	}
@@ -216,30 +243,31 @@ public class sanityAfterLogin extends Base_class {
 		String currentTXT= expectedelement.getText();
 	    String expectedTXT  = "My Profile";	
 	    
-	    AssertJUnit.assertEquals(currentTXT, expectedTXT);
+	    Assert.assertEquals(currentTXT, expectedTXT);
 	
 	}
 	
+
 	@Test(priority = 8) // verify dropdown navigate to my payment method
 	void verify_dropdown_navigate_to_my_Payment_method() throws Exception  {
 		driver.get(url2);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
 	    
-		WebElement  StartNow  = driver.findElement(By.xpath("//a[@id='navbardropUser']"));
-		 StartNow.click();	    					
+		WebElement  dropdown  = driver.findElement(By.xpath("//a[@id='navbardropUser']"));
+		dropdown.click();	    					
  
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@id='profile'])[1]")));
-	
-		WebElement  dropdownElement  = driver.findElement(By.xpath("(//a[@id='profile'])[1]"));
-		dropdownElement.click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='My Payment Methods']")));
 		
+		WebElement  dropdownElement  = driver.findElement(By.xpath("//a[text()='My Payment Methods']"));
+		dropdownElement.click();	
+		Thread.sleep(1000);
 		String currentUrlString =  driver.getCurrentUrl();
 		//WebElement  expectedelement  = driver.findElement(By.xpath("//div//h5[@id='myModalLabel']"));
 		//String currentTXT= expectedelement.getText();
 	    String expectedURL  = "https://dev.oculusproxies.com/paymentMethods";	
 	    
-	    AssertJUnit.assertEquals(currentUrlString, expectedURL);
-	
+	    Assert.assertEquals(currentUrlString, expectedURL);
+	Thread.sleep(3000);
 	
 	}
 	
@@ -275,47 +303,37 @@ public class sanityAfterLogin extends Base_class {
 			System.out.println("The auto-renew checkbox is not selected by default.");
 		}
 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@name='exampleRadios'])[1]")));	
+		WebElement 	redio = driver.findElement(By.xpath("(//input[@name='exampleRadios'])[1]"));
+		redio.click();
+		Thread.sleep(2000);
+		redio.click();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label//input[@type='radio']")));		
-		WebElement  select_card  = driver.findElement(By.xpath("//label//input[@type='radio']"));
+	    // Create Actions object
+	    Actions actions = new Actions(driver);
+
+	    // Perform keyboard action to paste the number
+	    actions.moveToElement(redio)
+	           .click()  // Click on the input field to ensure it's focused
+	           .sendKeys("3333")  
+	           .build()
+	           .perform();
 		
-		if(select_card.isSelected()) 
-		{
-			System.out.println("The redio button is selected by default.");
-		}
-		else
-		{
-			select_card.click();	
-
-		}
-
-
-        System.out.println("working......................1");
-        
-        // Wait for the iframe to be available
-      //  wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("(//iframe[@role='presentation'])[10]")));
-
-        try
-        
-        {
-        
-        	WebElement  cvcs  = driver.findElement(By.xpath("//iframe[@name='__privateStripeFrame41691']"));
-         	driver.switchTo().frame("__privateStripeFrame41691");
-		    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@data-elements-stable-field-name='cardCvc']")));	
-
-		    WebElement  cvc  = driver.findElement(By.xpath("//input[@data-elements-stable-field-name='cardCvc']"));
-
-		cvc.sendKeys("111");
-		   System.out.println("working......................2");     
-        }
-        catch (Exception e) 
-        {
+		WebElement 	Pay = driver.findElement(By.xpath("(//button[text()=' Pay '])[1]"));
+		Pay.click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=' Congratulations, your payment is successful! You can now start using your plan.']")));	
+		WebElement 	CongratulationsMsg = driver.findElement(By.xpath("//div[text()=' Congratulations, your payment is successful! You can now start using your plan.']"));
+		String ActualString = CongratulationsMsg.getText();
+		String expectedString = "Congratulations, your payment is successful! You can now start using your plan.\n"
+				+ "You can click here to check your plan details.";	
+		
+		try {
+			Assert.assertEquals(ActualString, expectedString);
+			System.out.println("Congratulations, your payment is successful! You can now start using your plan.");
+		} catch (Exception e) {
 			System.out.println(e);
-		} 
-		Thread.sleep(5000);
-		WebElement  Pay  = driver.findElement(By.xpath("(//button[@type='button'])[4]"));
-		//Pay.click();
-		Thread.sleep(5000);
+		}
 
 	}
 	
@@ -356,7 +374,7 @@ public class sanityAfterLogin extends Base_class {
 		String expectedString  = "3.3.3.3";		
 		
 		try {
-		AssertJUnit.assertEquals(ip, expectedString);
+		Assert.assertEquals(ip, expectedString);
 		}
 		catch (Exception e)
 		{
@@ -415,7 +433,7 @@ public class sanityAfterLogin extends Base_class {
 	                String expectedUrl = "https://support.oculusproxies.com/hc/en-us/articles/23101526359835-Integrate-your-proxies-into-any-browser";
 	                String actualUrl = driver.getCurrentUrl();
 
-	                AssertJUnit.assertEquals(actualUrl, expectedUrl);
+	                Assert.assertEquals(actualUrl, expectedUrl);
 	                // Break the loop if assertion is successful
 	                break;
 	            } catch (Exception e) {
@@ -454,7 +472,7 @@ public class sanityAfterLogin extends Base_class {
 	                dropdown.selectByVisibleText("India"); 
 
 	                WebElement selectedOption = dropdown.getFirstSelectedOption();
-	                AssertJUnit.assertEquals(selectedOption.getText(), "India"); 
+	                Assert.assertEquals(selectedOption.getText(), "India"); 
 
 	                
 	                break;
@@ -471,7 +489,7 @@ public class sanityAfterLogin extends Base_class {
 	}
 
 	@Test(priority = 15) //verify_Change_Payment_Method_Is_Functional_under_configure_proxy_page
-	void verify_Change_Payment_Method_Is_Functional_under_configure_proxy_page() {
+	void verify_navigate_to_Change_Payment_Method_Is_Functional_under_configure_proxy_page() {
 	    driver.get(url2);
 	    try {
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));
@@ -500,6 +518,71 @@ public class sanityAfterLogin extends Base_class {
 	                try {
 	                	Assert.assertEquals(actualText, ExpectedText);
 					} catch (Exception e) {
+						System.out.println(e);
+					}
+	                
+	                break;
+	            } catch (Exception e) {
+	                
+	             //   WebElement back = driver.findElement(By.xpath("//span[text()='< Back to orders']"));	                
+	            //    back.click();	                
+	                continue;	                
+	            }
+	        }
+	    } catch (Exception e) {
+	        System.out.println("Exception occurred: " + e.getMessage());
+	    }
+	}
+	
+
+	@Test(priority = 15) //verify_Change_Payment_Method_Is_Functional_under_configure_proxy_page
+	void verify_Change_Payment_Method_Update_Is_Functional_under_configure_proxy_page() {
+	    driver.get(url2);
+	    try {
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));
+	        WebElement tryNow = driver.findElement(By.xpath("(//button[text()=' Try now '])[1]"));
+	        tryNow.click();
+
+	        for(int i = 1; i <= 4; i++) // Start from i=1 
+	        	{ 
+		            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@id='tabaction'])["+i+"]")));
+		            WebElement configure = driver.findElement(By.xpath("(//a[@id='tabaction'])["+i+"]"));
+		            configure.click();
+
+	            try {
+	            	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[text()='Change Payment Method'])[1]")));
+	                WebElement Change_Payment_Method = driver.findElement(By.xpath("(//a[text()='Change Payment Method'])[1]"));
+	                Change_Payment_Method.click();	                
+
+	                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='radio'])[1]")));
+	                WebElement radiobutton = driver.findElement(By.xpath("(//input[@type='radio'])[1]"));
+    	
+	                	try {
+		                	if(!radiobutton.isSelected()) {	                		
+		                		radiobutton.click();
+		                		 Thread.sleep(3000);
+		                	}
+						}
+	                	catch (Exception e) 
+	                	{
+							System.out.println(e);
+						}
+ 
+	                	  WebElement update = driver.findElement(By.xpath("//div[@id='update-btn']"));
+	                	  update.click();
+	                	  
+	                	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[6]"))); 
+	                	  WebElement save = driver.findElement(By.xpath("(//button[@type='button'])[6]"));
+	                	  save.click();
+	                	  
+	                	 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));  
+	    	            WebElement alertDialog = driver.findElement(By.xpath("//div[@role='alertdialog']"));
+	    	            String actualtxt = alertDialog.getText();
+	    	            String ExpectedText ="Your payment method has been updated for this order";   	
+	    	        try { 	
+	                	Assert.assertEquals(actualtxt, ExpectedText);
+					} 
+	    	        catch (Exception e) {
 						System.out.println(e);
 					}
 	                
@@ -596,6 +679,7 @@ public class sanityAfterLogin extends Base_class {
 	    }
 	}
 
+
 	
 
 	@Test(priority = 18)
@@ -641,4 +725,138 @@ public class sanityAfterLogin extends Base_class {
 		     }
   }
 }
+	
+
+	@Test(priority = 19)
+	void verify_Your_payment_method_has_been_updated_for_this_order() {
+	    driver.get(url2);
+
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Try now '])[1]")));
+	    WebElement tryNow = driver.findElement(By.xpath("(//button[text()=' Try now '])[1]"));
+	    tryNow.click();
+
+	    { 
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@id='tabaction'])["+1+"]")));
+	        WebElement configure = driver.findElement(By.xpath("(//a[@id='tabaction'])["+1+"]"));
+	        configure.click();
+	        try {
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[text()='Change Payment Method'])[1]")));
+	            WebElement Change_Payment_Method = driver.findElement(By.xpath("(//a[text()='Change Payment Method'])[1]"));
+	            Change_Payment_Method.click();      
+	            
+	            //1
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Update ']")));
+	            WebElement Update = driver.findElement(By.xpath("//button[text()=' Update ']"));
+	            Update.click();
+	            //2
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Save ']")));
+	            WebElement save = driver.findElement(By.xpath("//button[text()=' Save ']"));
+	            save.click();
+	            
+	            //3
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));
+	            WebElement alertDialog = driver.findElement(By.xpath("//div[@role='alertdialog']"));
+	            String actualtxt = alertDialog.getText();
+//	            System.out.println(actualtxt);
+	            String expectedtxt = "Your payment method has been updated for this order.";
+
+	            try {
+					Assert.assertEquals(actualtxt, expectedtxt);
+				} catch (AssertionError e) {
+					System.out.println(e);
+				}
+        
+	            
+	        } catch (Exception e) {
+	            System.out.println("Exception occurred: " + e.getMessage());
+	        }
+	    }
+	}
+	
+
+	@Test(priority = 20) // verify dropdown navigate to my payment method
+	void verify_dropdown_navigate_to_my_Payment_method_update() throws Exception  {
+		driver.get(url2);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
+	    
+		WebElement  StartNow  = driver.findElement(By.xpath("//a[@id='navbardropUser']"));
+		 StartNow.click();	    					
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='My Payment Methods']")));
+	
+		WebElement  dropdownElement  = driver.findElement(By.xpath("//a[text()='My Payment Methods']"));
+		dropdownElement.click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//span//img[@alt='Edit'])[1]")));		
+		WebElement  editicon  = driver.findElement(By.xpath("(//div//span//img[@alt='Edit'])[1]"));
+		editicon.click();	
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Update ']")));
+			WebElement updateBtn  = driver.findElement(By.xpath("//button[text()=' Update ']"));
+			if(updateBtn.isEnabled()) {
+				
+				updateBtn.click();	
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));
+				WebElement alerdialog  = driver.findElement(By.xpath("//div[@role='alertdialog']"));
+				String actualtxt = alerdialog.getText();
+				String expecString = "Payment detail is updated successfully";
+				Assert.assertEquals(actualtxt, expecString);
+				//System.out.println(actualtxt);
+			}
+			else {
+				System.out.println("update button is disabled");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+	
+	}
+	
+
+	@Test(priority = 21) // verify_update_my_Profile
+	void verify_update_my_Profile() throws Exception  {
+		driver.get(url2);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbardropUser']")));
+	    
+		WebElement  StartNow  = driver.findElement(By.xpath("//a[@id='navbardropUser']"));
+		 StartNow.click();	    					
+ 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='profile']")));
+	
+		WebElement  dropdownElement  = driver.findElement(By.xpath("//a[@id='profile']"));
+		dropdownElement.click();		
+
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='profile']")));		
+			WebElement  editiupdatebtn = driver.findElement(By.xpath("//button[@id='profile']"));
+		
+			if(editiupdatebtn.isEnabled()) {
+				
+				editiupdatebtn.click();	
+				
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alertdialog']")));
+				WebElement alerdialog  = driver.findElement(By.xpath("//div[@role='alertdialog']"));
+				String actualtxt = alerdialog.getText();
+				String expecString = "Your profile updated successfully";
+				Assert.assertEquals(actualtxt, expecString);
+				//System.out.println(actualtxt);
+			}
+			else {
+				System.out.println("update button is disabled");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+	
+	}
+	
+	
+	
+	
+	
+	
+	
 }

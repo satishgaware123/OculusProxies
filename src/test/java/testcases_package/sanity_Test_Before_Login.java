@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 public class sanity_Test_Before_Login extends Base_class2{
 
-	
 	// for legacy
 
 	@Test(priority = 1)
@@ -27,16 +26,12 @@ public class sanity_Test_Before_Login extends Base_class2{
 		WebElement dropdown = driver.findElement(By.id("pricing-dropdown"));
 		dropdown.click();
 	    
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("//a[text()='Premium DC ISP Proxies']")));
-		WebElement Premium_DC_ISP_Proxies = driver.findElement(By.xpath("//a[text()='Premium DC ISP Proxies']"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing/premium']")));
+		WebElement Premium_DC_ISP_Proxies = driver.findElement(By.xpath("//a[@href='/pricing/premium']"));
 		Premium_DC_ISP_Proxies.click();
-		
-		
-		Thread.sleep(2000);
+
 		String actuaString = driver.getCurrentUrl();
 	    String expectedString  = "https://dev.oculusproxies.com/pricing/premium";
-	    //Thread.sleep(2000);
 	    
 	   try {
 		
@@ -56,8 +51,6 @@ public class sanity_Test_Before_Login extends Base_class2{
 	   
 	   WebElement dropdown2 = driver.findElement(By.id("pricing-dropdown"));
 		dropdown2.click();
-	    
-		Thread.sleep(2000);
 		
 		WebElement Residential_Proxies = driver.findElement(By.xpath("//a[text()='Residential Proxies']"));
 		Residential_Proxies.click();

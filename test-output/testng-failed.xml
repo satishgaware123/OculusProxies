@@ -3,22 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases_package.sanity_Test_Before_Login">
+      <class name="testcases_package.Purchase_from_legacy">
         <methods>
-          <include name="test007"/>
+          <include name="Purchase_ISP_Primium"/>
           <include name="Close_Browser"/>
-          <include name="test008"/>
-          <include name="test006"/>
-          <include name="test003"/>
-          <include name="test004"/>
-          <include name="test009"/>
-          <include name="test002"/>
-          <include name="test010"/>
-          <include name="test011"/>
           <include name="start_bowser"/>
-          <include name="test001"/>
         </methods>
-      </class> <!-- testcases_package.sanity_Test_Before_Login -->
+      </class> <!-- testcases_package.Purchase_from_legacy -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
