@@ -10,7 +10,7 @@ public class ExtentReportGenerator {
 	
 	public static ExtentReports generateReport() {
 	
-	String ReportPath = "/home/hp/eclipse-workspace/OculusProxies/Oculus_Report";
+	String ReportPath = "/home/hp/git/repository3/Oculus_Report";
 	
 	ExtentSparkReporter repoter = new ExtentSparkReporter(ReportPath);
 	  
