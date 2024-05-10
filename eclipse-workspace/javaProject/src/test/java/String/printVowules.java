@@ -13,7 +13,7 @@ public class printVowules {
 			{
 				System.out.println(ch +" ");				
 			}
-				//test		
+	  	
 		}
 
 	}
