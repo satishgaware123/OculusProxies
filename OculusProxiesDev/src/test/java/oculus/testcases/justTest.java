@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class justTest extends BaseClass2{
 	
-//
+
 	@Test(priority = 1)
 	void verify_DetectMyIP_isFunctional() throws Exception {
 		driver.get(url3);				
@@ -25,7 +25,7 @@ public class justTest extends BaseClass2{
 		String actString = getIP.getText();
 
 		try {
-			Assert.assertEquals(actString, "49.36.81.181a");
+			Assert.assertEquals(actString, "49.36.81.181");
 		} catch (Exception e) {
 			System.out.println(e);
 }	
