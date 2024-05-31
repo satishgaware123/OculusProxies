@@ -1,0 +1,11 @@
+<suite name="MySuite">
+    <test name="MyTest">
+		<parameter name="URL" value="https://dev.oculusproxies.com/legacy"/>
+		<parameter name="URL2" value="https://dev.oculusproxies.com"/>
+        <parameter name="username" value="user123"/>
+        <parameter name="password" value="pass123"/>
+        <classes>
+            <class name="oculus.testcases.BaseClass2"/>
+        </classes>
+    </test>
+</suite>

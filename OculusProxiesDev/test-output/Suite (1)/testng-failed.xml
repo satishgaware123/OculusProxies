@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite (1)]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="oculus.utilities.listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="oculus.testcases.SanityTestV3">
+        <methods>
+          <include name="verifyProductPage_ISP"/>
+          <include name="verifyProductPage_Shared_Datacenter"/>
+          <include name="start_bowser"/>
+          <include name="verifyProductPage_Dedicated_Datacenter"/>
+          <include name="Close_Browser"/>
+          <include name="verifyProductPage_ISP_Plus"/>
+        </methods>
+      </class> <!-- oculus.testcases.SanityTestV3 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite (1)] -->

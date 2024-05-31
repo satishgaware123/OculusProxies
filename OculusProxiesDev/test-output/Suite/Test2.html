@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>TestNG:  Test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>27/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 31 12:10:36 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>63 seconds (63818 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_SharedDC_pricepage_from_Product_Page()'><b>verify_navigateTo_SharedDC_pricepage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISP()'><b>verify_dropdown_Price_changed_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_sharedDC()'><b>verify_dropdown_Price_changed_sharedDC</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_reverse_flow_V4_HP_workingas_Expecetd()'><b>verify_reverse_flow_V4_HP_workingas_Expecetd</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_dedicatedDC_ProductPage()'><b>verify_naviagate_to_dedicatedDC_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_MyProxiesPage_from_Product_Page()'><b>verify_navigateTo_MyProxiesPage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_DedicatedDc()'><b>verify_dropdown_Price_changed_DedicatedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISP_ProductPage()'><b>verify_naviagate_to_ISP_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_values_ISP()'><b>verify_dropdown_values_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SignUp_Page_From_LOGINL_Page()'><b>verify_navigate_To_SignUp_Page_From_LOGINL_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_shareDC2()'><b>verify_dropdown_Price_changed_shareDC2</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_TAC_From_SIGNUP_Page()'><b>verify_navigate_To_TAC_From_SIGNUP_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISPplus_ProductPage()'><b>verify_naviagate_to_ISPplus_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_ISP_from_Product_Page()'><b>verify_navigateTo_ISP_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_sharedDc_ProductPage()'><b>verify_naviagate_to_sharedDc_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()'><b>verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISPplus()'><b>verify_dropdown_Price_changed_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_ISPplus_from_Product_Page()'><b>verify_navigateTo_ISPplus_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_liks_onSignUp_page_LOGINL_INK()'><b>verify_liks_onSignUp_page_LOGINL_INK</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verifyProductValues_ProxiesPricing()'><b>verifyProductValues_ProxiesPricing</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_values_SharedDC()'><b>verify_dropdown_values_SharedDC</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_values_ISPplus()'><b>verify_dropdown_values_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verifyALLProductInProductDropdown()'><b>verifyALLProductInProductDropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_values_DedicatedDC()'><b>verify_dropdown_values_DedicatedDC</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>0</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_forgotPass_From_LOGIN_Page()'><b>verify_navigate_To_forgotPass_From_LOGIN_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()'><b>verify_navigateTo_dedicatedDc_pricePage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page()'><b>verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@3febb011</td></tr>
+</table><p>
+</body>
+</html>
