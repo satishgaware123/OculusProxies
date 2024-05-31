@@ -8,10 +8,7 @@ import org.testng.annotations.Test;
 
 public class justTest extends BaseClass2{
 	
-	
 
-	
-	
 	@Test(priority = 1)
 	void verify_DetectMyIP_isFunctional() throws Exception {
 		driver.get(url3);				
