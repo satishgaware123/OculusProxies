@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="oculus.testcases.justTest">
+      <class name="oculus.testcases.SanityTestV3">
         <methods>
-          <include name="start_bowser"/>
           <include name="verify_DetectMyIP_isFunctional"/>
+          <include name="start_bowser"/>
           <include name="Close_Browser"/>
         </methods>
-      </class> <!-- oculus.testcases.justTest -->
+      </class> <!-- oculus.testcases.SanityTestV3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

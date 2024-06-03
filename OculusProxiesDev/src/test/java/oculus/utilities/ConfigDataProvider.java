@@ -11,7 +11,7 @@ public class ConfigDataProvider {
 	public ConfigDataProvider () {
 	try {
 	
-	String Path = "/home/hp/eclipse-workspace/OculusProxiesDev/ConfigProperties/ConfigData";
+	String Path = "/home/hp/git/repository4/OculusProxiesDev/ConfigProperties/ConfigData";
 		
 	File file = new File(Path);
 	

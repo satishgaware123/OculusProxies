@@ -154,13 +154,10 @@ public class PurchaseV3Products  extends BaseClass {
 //	@Test(enabled = false)
 	void verifySharedDCProductPurchase() throws Exception {
 	    driver.get(url2);
-
 	    WebElement startNow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Start now '])[3]")));
 	    startNow.click();
-
 	    WebElement buyNow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[text()=' Buy now '])[1]")));
 	    buyNow.click();
-
 	    WebElement payNow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Pay Now ']")));
 	    payNow.click();
 	    WebElement autoPayCheckBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label//input[@type='checkbox']")));
@@ -176,13 +173,11 @@ public class PurchaseV3Products  extends BaseClass {
 	    radio.click();
 	    Thread.sleep(1000);
 	    radio.click();
-
 	    Actions actions = new Actions(driver);
 	    actions.moveToElement(radio).click().sendKeys("986521485").build().perform();
-
 	    WebElement payButton = driver.findElement(By.xpath("(//button[text()=' Pay '])[1]"));
 	    payButton.click();
-
+	    
 	    WebElement congratulationsMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=' Congratulations, your payment is successful! You can now start using your plan.']")));
 	    String actualString = congratulationsMsg.getText();
 	    String expectedString = "Congratulations, your payment is successful! You can now start using your plan.\n" +
@@ -193,15 +188,12 @@ public class PurchaseV3Products  extends BaseClass {
 	        System.out.println("SharedDCProduct: "+"Congratulations, your payment is successful! You can now start using your plan.");
 	    } catch (AssertionError e) {
 	        System.out.println(e.getMessage());
-	    }
-	    
+	    }	    
     	//click on here
     	WebElement here = driver.findElement(By.xpath("//a[text()='here ']"));
-    	here.click();
-    	
+    	here.click();  	
     	WebElement sharedc = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//tbody//td)[1]")));
     	String expString = 	sharedc.getText();
-
     	try {
 
 	        Assert.assertEquals(expString, "Shared Datacenter");
@@ -222,13 +214,8 @@ public class PurchaseV3Products  extends BaseClass {
 	        Assert.assertEquals(autorenewtxt, "0 %");
 	    } catch (AssertionError e) {
 	        System.out.println(e.getMessage());
-	    }
-	    
-	    
-	    
-	    
+	    }  
 	}
-
 
 	@Test(enabled = false)
 //	@Test(priority = 4)

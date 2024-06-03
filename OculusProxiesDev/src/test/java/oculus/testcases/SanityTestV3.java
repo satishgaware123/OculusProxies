@@ -279,9 +279,8 @@ public class SanityTestV3 extends BaseClass2{
 					Assert.assertEquals(priceeString, "$1.5/IP");
 				} catch (Exception e) {
 					System.out.println(e);
-				}
-
-		        }
+		}
+   }
 			@Test(priority = 13) 
 			void verify_dropdown_Price_changed_sharedDC() throws Exception  {
 				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[3]")));
@@ -605,7 +604,7 @@ public class SanityTestV3 extends BaseClass2{
 			String actString = getIP.getText();
 
 			try {
-				Assert.assertEquals(actString, "49.36.81.181a");
+				Assert.assertEquals(actString, "49.36.81.181");
 			} catch (Exception e) {
 				System.out.println(e);
 	}	
