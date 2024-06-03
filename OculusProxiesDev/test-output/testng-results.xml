@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="29" passed="29" failed="0" skipped="0">
+<testng-results ignored="0" total="58" passed="58" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-31T18:17:43 IST" name="Default suite" finished-at="2024-05-31T18:18:55 IST" duration-ms="71989">
+  <suite started-at="2024-06-03T15:49:43 IST" name="Suite" finished-at="2024-06-03T15:56:17 IST" duration-ms="394002">
     <groups>
     </groups>
-    <test started-at="2024-05-31T18:17:43 IST" name="Default test" finished-at="2024-05-31T18:18:55 IST" duration-ms="71989">
+    <test started-at="2024-06-03T15:49:43 IST" name="Test1" finished-at="2024-06-03T15:53:05 IST" duration-ms="201623">
       <class name="oculus.testcases.SanityTestV3">
-        <test-method is-config="true" signature="start_bowser(java.lang.String)[pri:0, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:17:43 IST" name="start_bowser" finished-at="2024-05-31T18:17:52 IST" duration-ms="8780" status="PASS">
+        <test-method is-config="true" signature="start_bowser(java.lang.String)[pri:0, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:49:43 IST" name="start_bowser" finished-at="2024-06-03T15:49:54 IST" duration-ms="10488" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,127 +18,262 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start_bowser -->
-        <test-method signature="verify_naviagate_to_ISP_ProductPage()[pri:1, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:17:52 IST" name="verify_naviagate_to_ISP_ProductPage" finished-at="2024-05-31T18:17:57 IST" duration-ms="5110" status="PASS">
+        <test-method signature="verify_naviagate_to_ISP_ProductPage()[pri:1, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:49:54 IST" name="verify_naviagate_to_ISP_ProductPage" finished-at="2024-06-03T15:50:20 IST" duration-ms="25834" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_naviagate_to_ISP_ProductPage -->
-        <test-method signature="verify_naviagate_to_ISPplus_ProductPage()[pri:2, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:17:57 IST" name="verify_naviagate_to_ISPplus_ProductPage" finished-at="2024-05-31T18:17:58 IST" duration-ms="1058" status="PASS">
+        <test-method signature="verify_naviagate_to_ISPplus_ProductPage()[pri:2, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:20 IST" name="verify_naviagate_to_ISPplus_ProductPage" finished-at="2024-06-03T15:50:20 IST" duration-ms="703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_naviagate_to_ISPplus_ProductPage -->
-        <test-method signature="verify_naviagate_to_sharedDc_ProductPage()[pri:3, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:17:58 IST" name="verify_naviagate_to_sharedDc_ProductPage" finished-at="2024-05-31T18:17:59 IST" duration-ms="983" status="PASS">
+        <test-method signature="verify_naviagate_to_sharedDc_ProductPage()[pri:3, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:20 IST" name="verify_naviagate_to_sharedDc_ProductPage" finished-at="2024-06-03T15:50:21 IST" duration-ms="991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_naviagate_to_sharedDc_ProductPage -->
-        <test-method signature="verify_naviagate_to_dedicatedDC_ProductPage()[pri:4, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:17:59 IST" name="verify_naviagate_to_dedicatedDC_ProductPage" finished-at="2024-05-31T18:18:00 IST" duration-ms="1417" status="PASS">
+        <test-method signature="verify_naviagate_to_dedicatedDC_ProductPage()[pri:4, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:21 IST" name="verify_naviagate_to_dedicatedDC_ProductPage" finished-at="2024-06-03T15:50:22 IST" duration-ms="1092" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_naviagate_to_dedicatedDC_ProductPage -->
-        <test-method signature="verifyProductValues_ProxiesPricing()[pri:5, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:00 IST" name="verifyProductValues_ProxiesPricing" finished-at="2024-05-31T18:18:03 IST" duration-ms="2481" status="PASS">
+        <test-method signature="verifyProductValues_ProxiesPricing()[pri:5, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:22 IST" name="verifyProductValues_ProxiesPricing" finished-at="2024-06-03T15:50:30 IST" duration-ms="7966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductValues_ProxiesPricing -->
-        <test-method signature="verifyALLProductInProductDropdown()[pri:6, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:03 IST" name="verifyALLProductInProductDropdown" finished-at="2024-05-31T18:18:05 IST" duration-ms="2131" status="PASS">
+        <test-method signature="verifyALLProductInProductDropdown()[pri:6, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:30 IST" name="verifyALLProductInProductDropdown" finished-at="2024-06-03T15:50:49 IST" duration-ms="18615" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyALLProductInProductDropdown -->
-        <test-method signature="verify_dropdown_values_ISP()[pri:7, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:05 IST" name="verify_dropdown_values_ISP" finished-at="2024-05-31T18:18:08 IST" duration-ms="3169" status="PASS">
+        <test-method signature="verify_dropdown_values_ISP()[pri:7, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:50:49 IST" name="verify_dropdown_values_ISP" finished-at="2024-06-03T15:51:10 IST" duration-ms="20848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_values_ISP -->
-        <test-method signature="verify_dropdown_values_ISPplus()[pri:8, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:08 IST" name="verify_dropdown_values_ISPplus" finished-at="2024-05-31T18:18:08 IST" duration-ms="309" status="PASS">
+        <test-method signature="verify_dropdown_values_ISPplus()[pri:8, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:10 IST" name="verify_dropdown_values_ISPplus" finished-at="2024-06-03T15:51:10 IST" duration-ms="409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_values_ISPplus -->
-        <test-method signature="verify_dropdown_values_SharedDC()[pri:9, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:08 IST" name="verify_dropdown_values_SharedDC" finished-at="2024-05-31T18:18:09 IST" duration-ms="397" status="PASS">
+        <test-method signature="verify_dropdown_values_SharedDC()[pri:9, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:10 IST" name="verify_dropdown_values_SharedDC" finished-at="2024-06-03T15:51:11 IST" duration-ms="362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_values_SharedDC -->
-        <test-method signature="verify_dropdown_values_DedicatedDC()[pri:10, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:09 IST" name="verify_dropdown_values_DedicatedDC" finished-at="2024-05-31T18:18:09 IST" duration-ms="378" status="PASS">
+        <test-method signature="verify_dropdown_values_DedicatedDC()[pri:10, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:11 IST" name="verify_dropdown_values_DedicatedDC" finished-at="2024-06-03T15:51:11 IST" duration-ms="414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_values_DedicatedDC -->
-        <test-method signature="verify_dropdown_Price_changed_ISP()[pri:11, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:09 IST" name="verify_dropdown_Price_changed_ISP" finished-at="2024-05-31T18:18:12 IST" duration-ms="2796" status="PASS">
+        <test-method signature="verify_dropdown_Price_changed_ISP()[pri:11, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:11 IST" name="verify_dropdown_Price_changed_ISP" finished-at="2024-06-03T15:51:31 IST" duration-ms="19952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_Price_changed_ISP -->
-        <test-method signature="verify_dropdown_Price_changed_ISPplus()[pri:12, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:12 IST" name="verify_dropdown_Price_changed_ISPplus" finished-at="2024-05-31T18:18:12 IST" duration-ms="431" status="PASS">
+        <test-method signature="verify_dropdown_Price_changed_ISPplus()[pri:12, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:31 IST" name="verify_dropdown_Price_changed_ISPplus" finished-at="2024-06-03T15:51:31 IST" duration-ms="444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_Price_changed_ISPplus -->
-        <test-method signature="verify_dropdown_Price_changed_sharedDC()[pri:13, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:12 IST" name="verify_dropdown_Price_changed_sharedDC" finished-at="2024-05-31T18:18:13 IST" duration-ms="426" status="PASS">
+        <test-method signature="verify_dropdown_Price_changed_sharedDC()[pri:13, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:31 IST" name="verify_dropdown_Price_changed_sharedDC" finished-at="2024-06-03T15:51:32 IST" duration-ms="382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_Price_changed_sharedDC -->
-        <test-method signature="verify_dropdown_Price_changed_shareDC2()[pri:14, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:13 IST" name="verify_dropdown_Price_changed_shareDC2" finished-at="2024-05-31T18:18:13 IST" duration-ms="386" status="PASS">
+        <test-method signature="verify_dropdown_Price_changed_shareDC2()[pri:14, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:32 IST" name="verify_dropdown_Price_changed_shareDC2" finished-at="2024-06-03T15:51:32 IST" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_Price_changed_shareDC2 -->
-        <test-method signature="verify_dropdown_Price_changed_DedicatedDc()[pri:15, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:13 IST" name="verify_dropdown_Price_changed_DedicatedDc" finished-at="2024-05-31T18:18:14 IST" duration-ms="361" status="PASS">
+        <test-method signature="verify_dropdown_Price_changed_DedicatedDc()[pri:15, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:32 IST" name="verify_dropdown_Price_changed_DedicatedDc" finished-at="2024-06-03T15:51:33 IST" duration-ms="378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_dropdown_Price_changed_DedicatedDc -->
-        <test-method signature="verify_navigateTo_ISP_from_Product_Page()[pri:16, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:14 IST" name="verify_navigateTo_ISP_from_Product_Page" finished-at="2024-05-31T18:18:16 IST" duration-ms="2428" status="PASS">
+        <test-method signature="verify_navigateTo_ISP_from_Product_Page()[pri:16, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:33 IST" name="verify_navigateTo_ISP_from_Product_Page" finished-at="2024-06-03T15:51:39 IST" duration-ms="6794" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigateTo_ISP_from_Product_Page -->
-        <test-method signature="verify_navigateTo_ISPplus_from_Product_Page()[pri:17, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:16 IST" name="verify_navigateTo_ISPplus_from_Product_Page" finished-at="2024-05-31T18:18:18 IST" duration-ms="1690" status="PASS">
+        <test-method signature="verify_navigateTo_ISPplus_from_Product_Page()[pri:17, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:39 IST" name="verify_navigateTo_ISPplus_from_Product_Page" finished-at="2024-06-03T15:51:50 IST" duration-ms="10837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigateTo_ISPplus_from_Product_Page -->
-        <test-method signature="verify_navigateTo_SharedDC_pricepage_from_Product_Page()[pri:18, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:18 IST" name="verify_navigateTo_SharedDC_pricepage_from_Product_Page" finished-at="2024-05-31T18:18:19 IST" duration-ms="1559" status="PASS">
+        <test-method signature="verify_navigateTo_SharedDC_pricepage_from_Product_Page()[pri:18, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:51:50 IST" name="verify_navigateTo_SharedDC_pricepage_from_Product_Page" finished-at="2024-06-03T15:52:00 IST" duration-ms="10204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigateTo_SharedDC_pricepage_from_Product_Page -->
-        <test-method signature="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()[pri:19, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:19 IST" name="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page" finished-at="2024-05-31T18:18:21 IST" duration-ms="2047" status="PASS">
+        <test-method signature="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()[pri:19, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:00 IST" name="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page" finished-at="2024-06-03T15:52:03 IST" duration-ms="2612" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigateTo_dedicatedDc_pricePage_from_Product_Page -->
-        <test-method signature="verify_liks_onSignUp_page_LOGINL_INK()[pri:20, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:21 IST" name="verify_liks_onSignUp_page_LOGINL_INK" finished-at="2024-05-31T18:18:26 IST" duration-ms="4238" status="PASS">
+        <test-method signature="verify_liks_onSignUp_page_LOGINL_INK()[pri:20, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:03 IST" name="verify_liks_onSignUp_page_LOGINL_INK" finished-at="2024-06-03T15:52:07 IST" duration-ms="4076" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_liks_onSignUp_page_LOGINL_INK -->
-        <test-method signature="verify_navigateTo_MyProxiesPage_from_Product_Page()[pri:20, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:26 IST" name="verify_navigateTo_MyProxiesPage_from_Product_Page" finished-at="2024-05-31T18:18:29 IST" duration-ms="3743" status="PASS">
+        <test-method signature="verify_navigateTo_MyProxiesPage_from_Product_Page()[pri:20, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:07 IST" name="verify_navigateTo_MyProxiesPage_from_Product_Page" finished-at="2024-06-03T15:52:17 IST" duration-ms="9672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigateTo_MyProxiesPage_from_Product_Page -->
-        <test-method signature="verify_navigate_To_SignUp_Page_From_LOGINL_Page()[pri:21, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:29 IST" name="verify_navigate_To_SignUp_Page_From_LOGINL_Page" finished-at="2024-05-31T18:18:31 IST" duration-ms="1802" status="PASS">
+        <test-method signature="verify_navigate_To_SignUp_Page_From_LOGINL_Page()[pri:21, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:17 IST" name="verify_navigate_To_SignUp_Page_From_LOGINL_Page" finished-at="2024-06-03T15:52:27 IST" duration-ms="10171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigate_To_SignUp_Page_From_LOGINL_Page -->
-        <test-method signature="verify_navigate_To_TAC_From_SIGNUP_Page()[pri:22, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:31 IST" name="verify_navigate_To_TAC_From_SIGNUP_Page" finished-at="2024-05-31T18:18:36 IST" duration-ms="4564" status="PASS">
+        <test-method signature="verify_navigate_To_TAC_From_SIGNUP_Page()[pri:22, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:27 IST" name="verify_navigate_To_TAC_From_SIGNUP_Page" finished-at="2024-06-03T15:52:31 IST" duration-ms="4244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigate_To_TAC_From_SIGNUP_Page -->
-        <test-method signature="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page()[pri:23, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:36 IST" name="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page" finished-at="2024-05-31T18:18:40 IST" duration-ms="3994" status="PASS">
+        <test-method signature="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page()[pri:23, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:31 IST" name="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page" finished-at="2024-06-03T15:52:35 IST" duration-ms="3683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page -->
-        <test-method signature="verify_navigate_To_forgotPass_From_LOGIN_Page()[pri:24, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:40 IST" name="verify_navigate_To_forgotPass_From_LOGIN_Page" finished-at="2024-05-31T18:18:42 IST" duration-ms="2754" status="PASS">
+        <test-method signature="verify_navigate_To_forgotPass_From_LOGIN_Page()[pri:24, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:35 IST" name="verify_navigate_To_forgotPass_From_LOGIN_Page" finished-at="2024-06-03T15:52:38 IST" duration-ms="2952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigate_To_forgotPass_From_LOGIN_Page -->
-        <test-method signature="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()[pri:25, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:42 IST" name="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page" finished-at="2024-05-31T18:18:45 IST" duration-ms="2677" status="PASS">
+        <test-method signature="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()[pri:25, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:38 IST" name="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page" finished-at="2024-06-03T15:52:40 IST" duration-ms="1934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page -->
-        <test-method signature="verify_reverse_flow_V4_HP_workingas_Expecetd()[pri:26, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:45 IST" name="verify_reverse_flow_V4_HP_workingas_Expecetd" finished-at="2024-05-31T18:18:48 IST" duration-ms="2880" status="PASS">
+        <test-method signature="verify_reverse_flow_V4_HP_workingas_Expecetd()[pri:26, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:40 IST" name="verify_reverse_flow_V4_HP_workingas_Expecetd" finished-at="2024-06-03T15:52:59 IST" duration-ms="19508" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_reverse_flow_V4_HP_workingas_Expecetd -->
-        <test-method signature="verify_reverse_flow_V4_HP()[pri:27, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:48 IST" name="verify_reverse_flow_V4_HP" finished-at="2024-05-31T18:18:50 IST" duration-ms="1823" status="PASS">
+        <test-method signature="verify_reverse_flow_V4_HP()[pri:27, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:52:59 IST" name="verify_reverse_flow_V4_HP" finished-at="2024-06-03T15:53:01 IST" duration-ms="1816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_reverse_flow_V4_HP -->
-        <test-method signature="verify_DetectMyIP_isFunctional()[pri:28, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:50 IST" name="verify_DetectMyIP_isFunctional" finished-at="2024-05-31T18:18:55 IST" duration-ms="4835" status="PASS">
+        <test-method signature="verify_DetectMyIP_isFunctional()[pri:28, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:53:01 IST" name="verify_DetectMyIP_isFunctional" finished-at="2024-06-03T15:53:05 IST" duration-ms="3489" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_DetectMyIP_isFunctional -->
-        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:oculus.testcases.SanityTestV3@3ce1e309]" started-at="2024-05-31T18:18:55 IST" name="Close_Browser" finished-at="2024-05-31T18:18:55 IST" duration-ms="212" status="PASS">
+        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:oculus.testcases.SanityTestV3@74e52303]" started-at="2024-06-03T15:53:05 IST" name="Close_Browser" finished-at="2024-06-03T15:53:05 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Close_Browser -->
       </class> <!-- oculus.testcases.SanityTestV3 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-06-03T15:53:05 IST" name="Test2" finished-at="2024-06-03T15:56:17 IST" duration-ms="192352">
+      <class name="oculus.testcases.SanityTestV3">
+        <test-method is-config="true" signature="start_bowser(java.lang.String)[pri:0, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:05 IST" name="start_bowser" finished-at="2024-06-03T15:53:21 IST" duration-ms="16408" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start_bowser -->
+        <test-method signature="verify_naviagate_to_ISP_ProductPage()[pri:1, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:21 IST" name="verify_naviagate_to_ISP_ProductPage" finished-at="2024-06-03T15:53:35 IST" duration-ms="13330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_naviagate_to_ISP_ProductPage -->
+        <test-method signature="verify_naviagate_to_ISPplus_ProductPage()[pri:2, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:35 IST" name="verify_naviagate_to_ISPplus_ProductPage" finished-at="2024-06-03T15:53:36 IST" duration-ms="1294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_naviagate_to_ISPplus_ProductPage -->
+        <test-method signature="verify_naviagate_to_sharedDc_ProductPage()[pri:3, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:36 IST" name="verify_naviagate_to_sharedDc_ProductPage" finished-at="2024-06-03T15:53:37 IST" duration-ms="1446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_naviagate_to_sharedDc_ProductPage -->
+        <test-method signature="verify_naviagate_to_dedicatedDC_ProductPage()[pri:4, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:37 IST" name="verify_naviagate_to_dedicatedDC_ProductPage" finished-at="2024-06-03T15:53:39 IST" duration-ms="1478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_naviagate_to_dedicatedDC_ProductPage -->
+        <test-method signature="verifyProductValues_ProxiesPricing()[pri:5, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:39 IST" name="verifyProductValues_ProxiesPricing" finished-at="2024-06-03T15:53:42 IST" duration-ms="2980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductValues_ProxiesPricing -->
+        <test-method signature="verifyALLProductInProductDropdown()[pri:6, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:53:42 IST" name="verifyALLProductInProductDropdown" finished-at="2024-06-03T15:54:10 IST" duration-ms="27790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyALLProductInProductDropdown -->
+        <test-method signature="verify_dropdown_values_ISP()[pri:7, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:10 IST" name="verify_dropdown_values_ISP" finished-at="2024-06-03T15:54:15 IST" duration-ms="5230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_values_ISP -->
+        <test-method signature="verify_dropdown_values_ISPplus()[pri:8, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:15 IST" name="verify_dropdown_values_ISPplus" finished-at="2024-06-03T15:54:15 IST" duration-ms="486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_values_ISPplus -->
+        <test-method signature="verify_dropdown_values_SharedDC()[pri:9, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:15 IST" name="verify_dropdown_values_SharedDC" finished-at="2024-06-03T15:54:16 IST" duration-ms="392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_values_SharedDC -->
+        <test-method signature="verify_dropdown_values_DedicatedDC()[pri:10, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:16 IST" name="verify_dropdown_values_DedicatedDC" finished-at="2024-06-03T15:54:16 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_values_DedicatedDC -->
+        <test-method signature="verify_dropdown_Price_changed_ISP()[pri:11, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:16 IST" name="verify_dropdown_Price_changed_ISP" finished-at="2024-06-03T15:54:21 IST" duration-ms="4413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_Price_changed_ISP -->
+        <test-method signature="verify_dropdown_Price_changed_ISPplus()[pri:12, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:21 IST" name="verify_dropdown_Price_changed_ISPplus" finished-at="2024-06-03T15:54:21 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_Price_changed_ISPplus -->
+        <test-method signature="verify_dropdown_Price_changed_sharedDC()[pri:13, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:21 IST" name="verify_dropdown_Price_changed_sharedDC" finished-at="2024-06-03T15:54:21 IST" duration-ms="489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_Price_changed_sharedDC -->
+        <test-method signature="verify_dropdown_Price_changed_shareDC2()[pri:14, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:21 IST" name="verify_dropdown_Price_changed_shareDC2" finished-at="2024-06-03T15:54:22 IST" duration-ms="530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_Price_changed_shareDC2 -->
+        <test-method signature="verify_dropdown_Price_changed_DedicatedDc()[pri:15, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:22 IST" name="verify_dropdown_Price_changed_DedicatedDc" finished-at="2024-06-03T15:54:22 IST" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_dropdown_Price_changed_DedicatedDc -->
+        <test-method signature="verify_navigateTo_ISP_from_Product_Page()[pri:16, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:22 IST" name="verify_navigateTo_ISP_from_Product_Page" finished-at="2024-06-03T15:54:34 IST" duration-ms="11280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigateTo_ISP_from_Product_Page -->
+        <test-method signature="verify_navigateTo_ISPplus_from_Product_Page()[pri:17, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:34 IST" name="verify_navigateTo_ISPplus_from_Product_Page" finished-at="2024-06-03T15:54:36 IST" duration-ms="2409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigateTo_ISPplus_from_Product_Page -->
+        <test-method signature="verify_navigateTo_SharedDC_pricepage_from_Product_Page()[pri:18, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:36 IST" name="verify_navigateTo_SharedDC_pricepage_from_Product_Page" finished-at="2024-06-03T15:54:38 IST" duration-ms="2508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigateTo_SharedDC_pricepage_from_Product_Page -->
+        <test-method signature="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()[pri:19, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:38 IST" name="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page" finished-at="2024-06-03T15:54:55 IST" duration-ms="16824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigateTo_dedicatedDc_pricePage_from_Product_Page -->
+        <test-method signature="verify_liks_onSignUp_page_LOGINL_INK()[pri:20, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:54:55 IST" name="verify_liks_onSignUp_page_LOGINL_INK" finished-at="2024-06-03T15:55:15 IST" duration-ms="19926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_liks_onSignUp_page_LOGINL_INK -->
+        <test-method signature="verify_navigateTo_MyProxiesPage_from_Product_Page()[pri:20, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:15 IST" name="verify_navigateTo_MyProxiesPage_from_Product_Page" finished-at="2024-06-03T15:55:27 IST" duration-ms="11547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigateTo_MyProxiesPage_from_Product_Page -->
+        <test-method signature="verify_navigate_To_SignUp_Page_From_LOGINL_Page()[pri:21, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:27 IST" name="verify_navigate_To_SignUp_Page_From_LOGINL_Page" finished-at="2024-06-03T15:55:29 IST" duration-ms="2515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigate_To_SignUp_Page_From_LOGINL_Page -->
+        <test-method signature="verify_navigate_To_TAC_From_SIGNUP_Page()[pri:22, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:29 IST" name="verify_navigate_To_TAC_From_SIGNUP_Page" finished-at="2024-06-03T15:55:34 IST" duration-ms="4636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigate_To_TAC_From_SIGNUP_Page -->
+        <test-method signature="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page()[pri:23, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:34 IST" name="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page" finished-at="2024-06-03T15:55:38 IST" duration-ms="4363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page -->
+        <test-method signature="verify_navigate_To_forgotPass_From_LOGIN_Page()[pri:24, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:38 IST" name="verify_navigate_To_forgotPass_From_LOGIN_Page" finished-at="2024-06-03T15:55:42 IST" duration-ms="3381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigate_To_forgotPass_From_LOGIN_Page -->
+        <test-method signature="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()[pri:25, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:55:42 IST" name="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page" finished-at="2024-06-03T15:56:01 IST" duration-ms="19812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page -->
+        <test-method signature="verify_reverse_flow_V4_HP_workingas_Expecetd()[pri:26, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:56:01 IST" name="verify_reverse_flow_V4_HP_workingas_Expecetd" finished-at="2024-06-03T15:56:10 IST" duration-ms="8947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_reverse_flow_V4_HP_workingas_Expecetd -->
+        <test-method signature="verify_reverse_flow_V4_HP()[pri:27, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:56:10 IST" name="verify_reverse_flow_V4_HP" finished-at="2024-06-03T15:56:13 IST" duration-ms="2207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_reverse_flow_V4_HP -->
+        <test-method signature="verify_DetectMyIP_isFunctional()[pri:28, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:56:13 IST" name="verify_DetectMyIP_isFunctional" finished-at="2024-06-03T15:56:17 IST" duration-ms="4359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_DetectMyIP_isFunctional -->
+        <test-method is-config="true" signature="Close_Browser()[pri:0, instance:oculus.testcases.SanityTestV3@10e31a9a]" started-at="2024-06-03T15:56:17 IST" name="Close_Browser" finished-at="2024-06-03T15:56:17 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close_Browser -->
+      </class> <!-- oculus.testcases.SanityTestV3 -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
 </testng-results>
