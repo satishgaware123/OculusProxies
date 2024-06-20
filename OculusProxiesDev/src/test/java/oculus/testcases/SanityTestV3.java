@@ -119,12 +119,14 @@ public class SanityTestV3 extends BaseClass2{
 }		
 	
 	@Test(priority = 5)
-	void verifyProductValues_ProxiesPricing_free() throws Exception {
+	void verifyProduct_Values_For_Pricing_free() throws Exception {
 		driver.get(url2);		
 		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
 		price.click();
+		
 		WebElement Datacenter =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Datacenter')]")));
 		Datacenter.click();
+		
 		WebElement pricePage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='size ng-star-inserted'][normalize-space()='$0'])[1]")));
 		String actualTXT = pricePage.getText();
 		String expectSTR = "$0";
