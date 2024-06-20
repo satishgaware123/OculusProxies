@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="oculus.utilities.MyAnnotationYranformer"/>
+    <listener class-name="oculus.utilities.listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="oculus.testcases.SanityTestV3">
         <methods>
-          <include name="verify_DetectMyIP_isFunctional"/>
-          <include name="start_bowser"/>
+          <include name="verify_dropdown_Price_changed_sharedDC"/>
           <include name="Close_Browser"/>
+          <include name="verify_naviagate_to_sharedDc_ProductPage"/>
+          <include name="verifyProductValues_ProxiesPricing_free"/>
+          <include name="verify_liks_onSignUp_page_LOGINL_INK"/>
+          <include name="verify_dropdown_values_DedicatedDC"/>
+          <include name="verify_dropdown_values_SharedDC"/>
+          <include name="verify_navigate_To_forgotPass_From_LOGIN_Page"/>
+          <include name="verify_navigateTo_dedicatedDc_pricePage_from_Product_Page"/>
+          <include name="verify_dropdown_values_ISP"/>
+          <include name="start_bowser"/>
+          <include name="verify_Discriptions_on_Product_Page_ISPplus"/>
+          <include name="verify_Discriptions_on_Product_Page_DedicatedDc"/>
+          <include name="verify_dropdown_Price_changed_DedicatedDc"/>
+          <include name="verify_Discriptions_on_Product_Page_SharedDc"/>
+          <include name="verify_dropdown_Price_changed_ISP"/>
+          <include name="verify_navigateTo_MyProxiesPage_from_Product_Page"/>
+          <include name="verify_Discriptions_on_Product_Page_ISP"/>
+          <include name="verify_navigateTo_ISPplus_from_Product_Page"/>
+          <include name="verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page"/>
+          <include name="verify_navigate_To_SignUp_Page_From_LOGINL_Page"/>
+          <include name="verify_navigate_To_TAC_From_SIGNUP_Page"/>
+          <include name="verify_dropdown_Price_changed_ISPplus"/>
+          <include name="verify_naviagate_to_dedicatedDC_ProductPage"/>
+          <include name="verifyALLProductInProductDropdown"/>
+          <include name="verify_dropdown_Price_changed_shareDC2"/>
+          <include name="verify_naviagate_to_ISPplus_ProductPage"/>
+          <include name="verify_dropdown_values_ISPplus"/>
+          <include name="verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page"/>
+          <include name="verify_navigateTo_SharedDC_pricepage_from_Product_Page"/>
+          <include name="verify_naviagate_to_ISP_ProductPage"/>
+          <include name="verify_navigateTo_ISP_from_Product_Page"/>
         </methods>
       </class> <!-- oculus.testcases.SanityTestV3 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

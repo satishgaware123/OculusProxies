@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="oculus.testcases.SanityTestV3">
+      <class name="oculus.testcases.justTest">
         <methods>
-          <include name="verify_DetectMyIP_isFunctional"/>
+          <include name="verify_naviagate_to_ISP_ProductPage"/>
           <include name="start_bowser"/>
           <include name="Close_Browser"/>
+          <include name="verifyALLProductInProductDropdown"/>
         </methods>
-      </class> <!-- oculus.testcases.SanityTestV3 -->
+      </class> <!-- oculus.testcases.justTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

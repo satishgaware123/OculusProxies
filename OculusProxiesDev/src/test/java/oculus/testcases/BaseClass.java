@@ -1,8 +1,5 @@
 package oculus.testcases;
 
-
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -25,13 +22,11 @@ public class BaseClass {
 	String username = data.getUsername();
 	String Pass = data.getPass();
 	String url2 = data.getUrl2();
-	String url3 = data.getUrl3();
+	String MyPxoxiesPageurl = data.getUrl3();
 @Parameters("browser")
 
 	@BeforeClass
-	void start_bowser(@Optional("chrome") String browser) throws Exception {
-
-		
+	void start_bowser(@Optional("chrome") String browser) throws Exception {	
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 		WebDriverManager.chromedriver().setup();

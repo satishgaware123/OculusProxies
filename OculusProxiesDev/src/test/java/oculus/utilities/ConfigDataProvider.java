@@ -5,9 +5,11 @@ import java.io.FileInputStream;
 import java.util.Properties;
 //String Path = "/home/hp/eclipse-workspace/OculusProxies/ConfigProperties/ConfigData";
 
+import org.testng.annotations.DataProvider;
+
 public class ConfigDataProvider {
 
-	Properties Pro;
+	Properties Pro;	
 	public ConfigDataProvider () {
 	try {
 	

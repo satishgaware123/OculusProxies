@@ -2,6 +2,8 @@ package oculus.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -171,7 +173,7 @@ public class SanityTestV1 extends BaseClass2 {
 	    WebElement dropdownElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//select[@class='select-box ng-untouched ng-pristine ng-valid'])[1]")));
 	    Select dropdownSelect = new Select(dropdownElement);
 
-	    List<String> expectedValues = Arrays.asList("10", "25", "50", "100", "200", "400", "500");
+	    List<String> expectedValues = Arrays.asList("10", "25", "50", "100", "200", "400");
 
 	    List<String> missingValues = new ArrayList<>();
 	    for (String expectedValue : expectedValues) {

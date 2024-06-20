@@ -44,7 +44,7 @@ public class BaseClass2 {
 		driver = new ChromeDriver();
 		driver.get(url);
 
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 5);
 		driver.manage().window().maximize();
 		}		
 		if(browser.equalsIgnoreCase("Edge"))

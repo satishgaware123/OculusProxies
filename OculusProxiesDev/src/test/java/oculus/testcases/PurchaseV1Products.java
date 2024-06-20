@@ -1,5 +1,7 @@
  package oculus.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.File;
@@ -52,7 +54,7 @@ public class PurchaseV1Products extends BaseClass {
 	            "You can click here to check your plan details.";
 
 	    try {
-	        Assert.assertEquals(actualString, expectedString);
+	        AssertJUnit.assertEquals(actualString, expectedString);
 	        System.out.println("Congratulations, your payment is successful! You can now start using your plan.");
 	    } catch (AssertionError e) {
 	    	
@@ -107,7 +109,7 @@ public class PurchaseV1Products extends BaseClass {
 	            "You can click here to check your plan details.";
 
 	    try {
-	        Assert.assertEquals(actualString, expectedString);
+	        AssertJUnit.assertEquals(actualString, expectedString);
 	        System.out.println("Congratulations, your payment is successful! You can now start using your plan.");
 	    } catch (AssertionError e) {
 	        System.out.println(e.getMessage());
@@ -159,7 +161,7 @@ public class PurchaseV1Products extends BaseClass {
 	            "You can click here to check your plan details.";
 
 	    try {
-	        Assert.assertEquals(actualString, expectedString);
+	        AssertJUnit.assertEquals(actualString, expectedString);
 	        System.out.println("Congratulations, your payment is successful! You can now start using your plan.");
 	    } catch (AssertionError e) {
 	        System.out.println(e.getMessage());
@@ -211,7 +213,7 @@ public class PurchaseV1Products extends BaseClass {
 	            "You can click here to check your plan details.";
 
 	    try {
-	        Assert.assertEquals(actualString, expectedString);
+	        AssertJUnit.assertEquals(actualString, expectedString);
 	        System.out.println("Congratulations, your payment is successful! You can now start using your plan.");
 	    } catch (AssertionError e) {
 	        System.out.println(e.getMessage());
