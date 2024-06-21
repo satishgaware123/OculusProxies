@@ -1,15 +1,20 @@
 package oculus.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import oculus.utilities.ConfigDataProvider;
+import oculus.utilities.TakingScreenshot;
 import utils.SessionManager;
 
 public class BaseClass {
@@ -56,7 +61,14 @@ public class BaseClass {
 		}
 	
 		
-	}
+	}    
+	@AfterMethod
+    public void takeSS(ITestResult result) throws IOException {
+    	if(ITestResult.FAILURE==result.getStatus()) {
+    		TakingScreenshot.takesSS(driver,result.getName());
+    	}
+
+    }
 	
 		@AfterClass
 		

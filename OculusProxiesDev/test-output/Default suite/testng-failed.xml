@@ -5,10 +5,10 @@
     <classes>
       <class name="oculus.testcases.justTest">
         <methods>
-          <include name="verify_naviagate_to_ISP_ProductPage"/>
           <include name="start_bowser"/>
+          <include name="verify_price_get_changed_after_selected_larger_plan"/>
           <include name="Close_Browser"/>
-          <include name="verifyALLProductInProductDropdown"/>
+          <include name="takeSS"/>
         </methods>
       </class> <!-- oculus.testcases.justTest -->
     </classes>

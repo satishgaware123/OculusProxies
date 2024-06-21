@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -19,6 +20,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import oculus.utilities.ConfigDataProvider;
+import oculus.utilities.TakingScreenshot;
 
 //oculus.testcases.BaseClass2
 public class BaseClass2 {
@@ -32,8 +34,7 @@ public class BaseClass2 {
 	String Pass = data.getPass();
 	String url2 = data.getUrl2();
 	String url3 = data.getUrl3();
-	 
-	
+	 	
 	@Parameters("browser")
 	@BeforeClass
 	void start_bowser(@Optional("chrome") String browser) {
@@ -44,7 +45,7 @@ public class BaseClass2 {
 		driver = new ChromeDriver();
 		driver.get(url);
 
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 15);
 		driver.manage().window().maximize();
 		}		
 		if(browser.equalsIgnoreCase("Edge"))
@@ -57,16 +58,12 @@ public class BaseClass2 {
 		driver.manage().window().maximize();		
 		}	
 }	
-//    @AfterMethod
-//    public void takeSS() throws IOException {
-//        String names = UUID.randomUUID().toString();
-//        String path = "/home/hp/eclipse-workspace/OculusProxiesDev/Oculus_Report/screenshots/" + names + ".png";
-//        File destination = new File(path);
-//        
-//        File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//        FileUtils.copyFile(source, destination);
-//    }
-	
+    @AfterMethod
+    public void takeSS(ITestResult result) throws IOException {
+    	if(ITestResult.FAILURE==result.getStatus()) {
+    		TakingScreenshot.takesSS(driver,result.getName());
+    	}
+    }	
 		@AfterClass		
 		void Close_Browser() {			
 			driver.close();	

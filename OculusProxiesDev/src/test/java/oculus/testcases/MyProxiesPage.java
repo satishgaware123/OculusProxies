@@ -15,7 +15,7 @@ public class MyProxiesPage extends BaseClass {
 	
 //	@Test(priority = 1)
 	@Test(enabled = false)
-	void verify_DetectMyIP_isFunctional() throws Exception {
+	void verify_price_get_changed_after_selected_larger_plan() throws Exception {
 		driver.get(url2);
 		WebElement myproxiespage =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()=' Try now '])[1]")));
 		myproxiespage.click();
