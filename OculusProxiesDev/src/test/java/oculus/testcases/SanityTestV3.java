@@ -1,9 +1,6 @@
 package oculus.testcases;
 
 import org.testng.annotations.Test;
-
-import com.google.gson.annotations.Until;
-
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import java.util.Arrays;
@@ -15,7 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 @Listeners(oculus.utilities.listeners.class)
-
 public class SanityTestV3 extends BaseClass2{
 
 	@Test(priority = 1)
