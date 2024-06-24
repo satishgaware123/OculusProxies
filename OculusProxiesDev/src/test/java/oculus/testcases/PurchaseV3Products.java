@@ -102,7 +102,6 @@ public class PurchaseV3Products  extends BaseClass {
 		 } catch (Exception e) {
 			 System.out.println(e);
 		 }
-
 	    WebElement radio = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@name='exampleRadios'])[1]")));
 	    radio.click();
 	    radio.click();
