@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriver;
 
 public class TakingScreenshot {
 
-	public static void takesSS(WebDriver driver, String scrennshotName) throws IOException {
+	public static void takesSS(WebDriver driver, String screenshotName) throws IOException {
 	   
-      String path = "/home/hp/git/repository4/OculusProxiesDev/Oculus_Report/screenshots"+scrennshotName+".png";
+      String path = "/home/hp/git/repository4/OculusProxiesDev/Oculus_Report/screenshots"+screenshotName+".png";
       File destination = new File(path);
       
       File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

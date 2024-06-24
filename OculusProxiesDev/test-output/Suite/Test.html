@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>37/2/4</td>
+<td>Tests passed/Failed/Skipped:</td><td>42/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 20 19:22:17 IST 2024</td>
+<td>Started on:</td><td>Fri Jun 21 16:03:58 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>344 seconds (344572 ms)</td>
+<tr><td>Total time:</td><td>204 seconds (204729 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,201 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus()'><b>verify_Discriptions_on_Product_Page_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace674659751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace674659751'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
-<td>16</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP()'><b>verify_Discriptions_on_Product_Page_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace768702707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace768702707'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
-<td>17</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -271,571 +76,215 @@ Session ID: a63f8f6da2251b95b3bbf5b24791e050
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verifyALLProductInProductDropdown()'><b>verifyALLProductInProductDropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISPplus_ProductPage()'><b>verify_naviagate_to_ISPplus_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
 <td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_FAQ_Link_navigateToCorrectPage_FromFAQ()'><b>verify_FAQ_Link_navigateToCorrectPage_FromFAQ</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_SharedDc()'><b>verify_Discriptions_on_Product_Page_SharedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>2</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_DedicatedDc()'><b>verify_Discriptions_on_Product_Page_DedicatedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>2</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_NavigateTo_FAQ_page()'><b>verify_NavigateTo_FAQ_page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_sharedDc_ProductPage()'><b>verify_naviagate_to_sharedDc_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigateTo_ISP_page_from_Product_Page()'><b>verify_navigateTo_ISP_page_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Link_is_Functional_under_WherecanIgetproxiesforEvents()'><b>verify_Link_is_Functional_under_WherecanIgetproxiesforEvents</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_Link_is_Functional_under_Can_I_test_my_proxies()'><b>verify_Link_is_Functional_under_Can_I_test_my_proxies</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
 <td>4</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_shareDC2()'><b>verify_dropdown_Price_changed_shareDC2</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>4</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()'><b>verify_navigateTo_dedicatedDc_pricePage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_naviagate_to_Residential_ProductPage()'><b>verify_naviagate_to_Residential_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
 <td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_Link_is_Functional_under_Can_I_test_my_proxies()'><b>verify_Link_is_Functional_under_Can_I_test_my_proxies</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_shareDC2()'><b>verify_dropdown_Price_changed_shareDC2</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>5</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>7</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()'><b>verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verifyALLProductInProductDropdown()'><b>verifyALLProductInProductDropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>2</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_liks_onSignUp_page_LOGINL_INK()'><b>verify_liks_onSignUp_page_LOGINL_INK</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_TAC_From_SIGNUP_Page()'><b>verify_navigate_To_TAC_From_SIGNUP_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page()'><b>verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>2</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISPplus_ProductPage()'><b>verify_naviagate_to_ISPplus_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISP()'><b>verify_dropdown_Price_changed_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SignUp_Page_From_LOGINL_Page()'><b>verify_navigate_To_SignUp_Page_From_LOGINL_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_DedicatedDc_product_values_from_dropdown()'><b>verify_DedicatedDc_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
 <td>5</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_dedicatedDC_ProductPage()'><b>verify_naviagate_to_dedicatedDC_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Starting_Prcing_OF_Product_Home_Page()'><b>verify_Starting_Prcing_OF_Product_Home_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigateTo_LoginPage_from_Product_Page()'><b>verify_navigateTo_LoginPage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_privacyPolicy_Link_is_Functional_under_Scale_with_Security()'><b>verify_privacyPolicy_Link_is_Functional_under_Scale_with_Security</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>4</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_Product_Values_For_free_plan()'><b>verify_Product_Values_For_free_plan</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>4</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_SharedDc_product_values_from_dropdown()'><b>verify_SharedDc_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_sharedDC()'><b>verify_dropdown_Price_changed_sharedDC</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>11</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigate_To_forgotPass_From_LOGIN_Page()'><b>verify_navigate_To_forgotPass_From_LOGIN_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>2</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_ISP_product_values_from_dropdown()'><b>verify_ISP_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
 <td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISPplus()'><b>verify_dropdown_Price_changed_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_LoginPage_from_Product_Page()'><b>verify_navigateTo_LoginPage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>5</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>7</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_DedicatedDc()'><b>verify_dropdown_Price_changed_DedicatedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_ISP_page_from_Product_Page()'><b>verify_navigateTo_ISP_page_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>6</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_ISPplus_product_values_from_dropdown()'><b>verify_ISPplus_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>5</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_freeDataCenterPlanFromFAQ()'><b>verify_naviagate_to_freeDataCenterPlanFromFAQ</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-<tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigate_To_TAC_From_SIGNUP_Page()'><b>verify_navigate_To_TAC_From_SIGNUP_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td></td>
-<td>3</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_navigateTo_ISPplus_from_Product_Page()'><b>verify_navigateTo_ISPplus_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISP_ProductPage()'><b>verify_naviagate_to_ISP_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_privacyPolicy_Link_is_Functional_under_Scale_with_Security()'><b>verify_privacyPolicy_Link_is_Functional_under_Scale_with_Security</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>38</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_DedicatedDc_product_values_from_dropdown()'><b>verify_DedicatedDc_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_footer_text_of_card()'><b>verify_footer_text_of_card</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_liks_onSignUp_page_LOGINL_INK()'><b>verify_liks_onSignUp_page_LOGINL_INK</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_sharedDC()'><b>verify_dropdown_Price_changed_sharedDC</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_sharedDc_ProductPage()'><b>verify_naviagate_to_sharedDc_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISP()'><b>verify_dropdown_Price_changed_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>4</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_DedicatedDc()'><b>verify_Discriptions_on_Product_Page_DedicatedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_Starting_Prcing_OF_Product_Home_Page()'><b>verify_Starting_Prcing_OF_Product_Home_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_SharedDc()'><b>verify_Discriptions_on_Product_Page_SharedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_price_get_changed_after_selected_plan()'><b>verify_price_get_changed_after_selected_plan</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_dedicatedDC_ProductPage()'><b>verify_naviagate_to_dedicatedDC_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>1</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_SharedDC_pricepage_from_Product_Page()'><b>verify_navigateTo_SharedDC_pricepage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_naviagate_to_Residential_Pricing_Page_From_ProductPage()'><b>verify_naviagate_to_Residential_Pricing_Page_From_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
 <td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_navigateTo_SharedDC_pricepage_from_Product_Page()'><b>verify_navigateTo_SharedDC_pricepage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP()'><b>verify_Discriptions_on_Product_Page_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
 <td></td>
-<td>1</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP()'><b>verify_Discriptions_on_Product_Page_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1008294188", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1008294188'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
-<td>17</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td title='oculus.testcases.SanityTestV3.verify_NavigateTo_FAQ_page()'><b>verify_NavigateTo_FAQ_page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP()'><b>verify_Discriptions_on_Product_Page_ISP</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace445554393", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace445554393'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISP(SanityTestV3.java:703)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
+<td title='oculus.testcases.SanityTestV3.verify_Product_Values_For_free_plan()'><b>verify_Product_Values_For_free_plan</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_ISPplus()'><b>verify_dropdown_Price_changed_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
 <td>17</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SignUp_Page_From_LOGINL_Page()'><b>verify_navigate_To_SignUp_Page_From_LOGINL_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_Link_is_Functional_under_WherecanIgetproxiesforEvents()'><b>verify_Link_is_Functional_under_WherecanIgetproxiesforEvents</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>18</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
 <td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus()'><b>verify_Discriptions_on_Product_Page_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace345679794", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace345679794'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
-<td>16</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 <tr>
-<td title='oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus()'><b>verify_Discriptions_on_Product_Page_ISPplus</b><br>Test class: oculus.testcases.SanityTestV3</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace302085789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace302085789'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Static Residential (ISP+)&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at oculus.testcases.SanityTestV3.verify_Discriptions_on_Product_Page_ISPplus(SanityTestV3.java:721)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Static Residential (ISP+)&apos;]&quot;}
-  (Session info: chrome=125.0.6422.112)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;hp-H310B&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2.0-39-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a63f8f6da2251b95b3bbf5b24791e050
-*** Element info: {Using=xpath, value=//a[text()=&apos;Static Residential (ISP+)&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-</pre></div></td>
-<td>16</td>
-<td>oculus.testcases.SanityTestV3@4681c175</td></tr>
+<td title='oculus.testcases.SanityTestV3.verify_ISPplus_product_values_from_dropdown()'><b>verify_ISPplus_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_SharedDc_product_values_from_dropdown()'><b>verify_SharedDc_product_values_from_dropdown</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page()'><b>verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigateTo_dedicatedDc_pricePage_from_Product_Page()'><b>verify_navigateTo_dedicatedDc_pricePage_from_Product_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_FAQ_Link_navigateToCorrectPage_FromFAQ()'><b>verify_FAQ_Link_navigateToCorrectPage_FromFAQ</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_ISP_ProductPage()'><b>verify_naviagate_to_ISP_ProductPage</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>9</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_naviagate_to_freeDataCenterPlanFromFAQ()'><b>verify_naviagate_to_freeDataCenterPlanFromFAQ</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>2</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_dropdown_Price_changed_DedicatedDc()'><b>verify_dropdown_Price_changed_DedicatedDc</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>8</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.verify_navigate_To_forgotPass_From_LOGIN_Page()'><b>verify_navigate_To_forgotPass_From_LOGIN_Page</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>3</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
+<tr>
+<td title='oculus.testcases.SanityTestV3.Verify_Residential_Proxy_Scraper_card()'><b>Verify_Residential_Proxy_Scraper_card</b><br>Test class: oculus.testcases.SanityTestV3</td>
+<td></td>
+<td>5</td>
+<td>oculus.testcases.SanityTestV3@5386659f</td></tr>
 </table><p>
 </body>
 </html>

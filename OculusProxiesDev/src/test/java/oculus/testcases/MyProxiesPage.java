@@ -1,5 +1,6 @@
 package oculus.testcases;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.util.NoSuchElementException;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+@Listeners(oculus.utilities.listeners.class)
 
 public class MyProxiesPage extends BaseClass {
 
@@ -70,7 +72,7 @@ public class MyProxiesPage extends BaseClass {
 		
 		WebElement Add_Proxies =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Add Proxies']")));
 		Add_Proxies.click();	
-		WebElement Static_Residential =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Static Residential']")));
+		WebElement Static_Residential =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a[@href='/pricing/premium?planType=isp_proxy']")));
 		Static_Residential.click();	
 				String curentURL =  driver.getCurrentUrl();				
 				try {

@@ -6,9 +6,9 @@
       <class name="oculus.testcases.justTest">
         <methods>
           <include name="start_bowser"/>
-          <include name="verify_price_get_changed_after_selected_larger_plan"/>
-          <include name="Close_Browser"/>
           <include name="takeSS"/>
+          <include name="verify_free_Plan"/>
+          <include name="Close_Browser"/>
         </methods>
       </class> <!-- oculus.testcases.justTest -->
     </classes>

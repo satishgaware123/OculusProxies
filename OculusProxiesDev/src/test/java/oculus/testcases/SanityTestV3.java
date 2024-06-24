@@ -1,10 +1,11 @@
 package oculus.testcases;
 
 import org.testng.annotations.Test;
+
+import com.google.gson.annotations.Until;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import org.testng.Assert;
 import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -35,7 +36,6 @@ public class SanityTestV3 extends BaseClass2{
 }	
 		driver.navigate().back();
 }	
-	
 	@Test(priority = 2)
 	void verify_naviagate_to_ISPplus_ProductPage() throws Exception {
 		WebElement signup =  wait.until(ExpectedConditions.elementToBeClickable(By.id("navbar-drop2")));
@@ -117,7 +117,6 @@ public class SanityTestV3 extends BaseClass2{
 			System.out.println(e);
 }	driver.navigate().back();	
 }		
-	
 	@Test(priority = 5)
 	void verify_Product_Values_For_free_plan() throws Exception {
 		driver.get(url2);		
@@ -151,14 +150,12 @@ public class SanityTestV3 extends BaseClass2{
 			System.out.println(e);
 }			
 }		
-	
-
 	@Test(priority = 6)
 	void verifyALLProductInProductDropdown() throws Exception {
 		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='navbar-drop2']")));
 		price.click();
 		
-		WebElement ISP =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'ISP')]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'ISP')]")));
 		WebElement pricePage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//a[contains(text(),'ISP')])[1]")));
 		String ActualText = pricePage.getText();
 		String ExpectedText = "ISP";
@@ -240,383 +237,331 @@ public class SanityTestV3 extends BaseClass2{
         }
 }
    
-	        @Test(priority = 8) 
-	    	void verify_ISPplus_product_values_from_dropdown() throws Exception  {	        	
-	    	driver.get(url2);
-			WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-			price.click();
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-			WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
-			Datacenter.click(); 
-			WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
-			Select dropdown2 = new Select(dropdownElementISPPlus);		
-			List<String> expectedValues2 = Arrays.asList("30 IP, 1 TB - $48","50 IP, 2 TB - $80","200 IP, 8 TB - $300");			
-			List<WebElement> dropdownOptions2 = dropdown2.getOptions();
-			for (String expectedValue2 : expectedValues2) {
-			    boolean found = false;
-			    for (WebElement option : dropdownOptions2) {
-			        if (option.getText().equals(expectedValue2)) {
-			            found = true;
-			            break;
-			        }
-			    }
-			    if (!found) {
-			        System.out.println("Value '" + expectedValue2 + "' is missing from ISPplus.");
-	    }		
-	}
- }		
+    @Test(priority = 8) 
+    void verify_ISPplus_product_values_from_dropdown() throws Exception  {	        	
+    	driver.get(url2);
+    	WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+    	price.click();
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+    	WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
+    	Datacenter.click(); 
+    	WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
+    	Select dropdown2 = new Select(dropdownElementISPPlus);		
+    	List<String> expectedValues2 = Arrays.asList("30 IP, 1 TB - $48","50 IP, 2 TB - $80","200 IP, 8 TB - $300");			
+    	List<WebElement> dropdownOptions2 = dropdown2.getOptions();
+    	for (String expectedValue2 : expectedValues2) {
+    		boolean found = false;
+    		for (WebElement option : dropdownOptions2) {
+    			if (option.getText().equals(expectedValue2)) {
+    				found = true;
+	            break;
+    			}
+    		}
+    		if (!found) {
+    			System.out.println("Value '" + expectedValue2 + "' is missing from ISPplus.");
+    		}		
+    	}
+    }		
 	
-		   @Test(priority = 9) 
-	    	void verify_SharedDc_product_values_from_dropdown() throws Exception  {
-			   driver.get(url2);
-				WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-				price.click();
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-				WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
-				Datacenter.click();       
-			   WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
-			   Select dropdown2 = new Select(dropdownElementISPPlus);
-			   List<String> expectedValues2 = Arrays.asList("30 GB - $9","100 GB - $27","200 GB - $50");
-			
-				   List<WebElement> dropdownOptions2 = dropdown2.getOptions();
-				for (String expectedValue2 : expectedValues2) {
-					boolean found = false;
-					for (WebElement option : dropdownOptions2) {
-						if (option.getText().equals(expectedValue2)) {
-							found = true;
-							break;
-			        }
-			    }
-			    if (!found) {
-			        System.out.println("Value '" + expectedValue2 + "' is missing from SharedDC.");
-		}	
-	}
- }		
-		   @Test(priority = 10) 
-	    	void verify_DedicatedDc_product_values_from_dropdown() throws Exception  {
-			   driver.get(url2);
-				WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-				price.click();
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-				WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
-				Datacenter.click();      
-			WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[3]")));
-			Select dropdown2 = new Select(dropdownElementISPPlus);
-			List<String> expectedValues2 = Arrays.asList("25 IP, 2.5 TB - $30","75 IP, 7.5 TB - $82.5","200 IP, 20 TB - $200");		
-			List<WebElement> dropdownOptions2 = dropdown2.getOptions();
-			for (String expectedValue2 : expectedValues2) {
-			    boolean found = false;
-			    for (WebElement option : dropdownOptions2) {
-			        if (option.getText().equals(expectedValue2)) {
-			            found = true;
-			            break;
-			        }
-			    }
-			    if (!found) {
-			        System.out.println("Value '" + expectedValue2 + "' is missing from Dedicated DC.");
+   @Test(priority = 9) 
+   void verify_SharedDc_product_values_from_dropdown() throws Exception  {
+	   driver.get(url2);
+	   WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+	   price.click();
+	   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+	   WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
+	   Datacenter.click();       
+	   WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
+	   Select dropdown2 = new Select(dropdownElementISPPlus);
+	   List<String> expectedValues2 = Arrays.asList("30 GB - $9","100 GB - $27","200 GB - $50");   
+	   List<WebElement> dropdownOptions2 = dropdown2.getOptions();
+	   for (String expectedValue2 : expectedValues2) {
+		   boolean found = false;
+		   for (WebElement option : dropdownOptions2) {
+			   if (option.getText().equals(expectedValue2)) {
+				   found = true;
+				   break;
+			   }
+		   }
+		   if (!found) {
+			   System.out.println("Value '" + expectedValue2 + "' is missing from SharedDC.");
+		   }	
+	   }
+   }		
+   @Test(priority = 10) 
+   void verify_DedicatedDc_product_values_from_dropdown() throws Exception  {
+	   driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
+		Datacenter.click();      
+		WebElement  dropdownElementISPPlus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[3]")));
+		Select dropdown2 = new Select(dropdownElementISPPlus);
+		List<String> expectedValues2 = Arrays.asList("25 IP, 2.5 TB - $30","75 IP, 7.5 TB - $82.5","200 IP, 20 TB - $200");		
+		List<WebElement> dropdownOptions2 = dropdown2.getOptions();
+		for (String expectedValue2 : expectedValues2) {
+			boolean found = false;
+			for (WebElement option : dropdownOptions2) {
+				if (option.getText().equals(expectedValue2)) {
+					found = true;
+					break;
+				}
 			}
-	   }				
-}
-			@Test(priority = 11) 
-			void verify_dropdown_Price_changed_ISP() throws Exception  {
-		    	driver.get(url2);
-				WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-				price.click();
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-				WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
-				Datacenter.click(); 
-				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[1]")));
-				Select dropdown = new Select(dropdownElementISP);
-				dropdown.selectByVisibleText("150 GB - $150");
-				try {
-					 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='size ng-star-inserted'])[1]")));
-					 String priceeString =  Price1.getText();
-					Assert.assertEquals(priceeString, "$1/GB");
-				} catch (Exception e) {
-				System.out.println(e);
-				}
-		        }
-
-			@Test(priority = 12) 
-			void verify_dropdown_Price_changed_ISPplus() throws Exception  {
-		    	driver.get(url2);
-				WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-				price.click();
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-				WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
-				Datacenter.click(); 
-//				 WebElement  ISPCTA  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'ISP')]")));
-//				 ISPCTA.click();
-				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
-				Select dropdown = new Select(dropdownElementISP);
-				dropdown.selectByVisibleText("200 IP, 8 TB - $300");
-				
-				 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='size ng-star-inserted'])[2]")));
-				 String priceeString =  Price1.getText();
-
-				try {
-					Assert.assertEquals(priceeString, "$1.5/IP");
-				} catch (Exception e) {
-					System.out.println(e);
-		}
+			if (!found) {
+				System.out.println("Value '" + expectedValue2 + "' is missing from Dedicated DC.");
+			}
+		}				
    }
-			@Test(priority = 13) 
-			void verify_dropdown_Price_changed_sharedDC() throws Exception  {
-				   driver.get(url2);
-					WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-					price.click();
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-					WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
-					Datacenter.click();    	
-				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
-				Select dropdown = new Select(dropdownElementISP);
-				dropdown.selectByVisibleText("200 GB - $50");
-				
-				 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'$0.25/GB')]")));
-				 String priceeString =  Price1.getText();
+	@Test(priority = 11) 
+	void verify_dropdown_Price_changed_ISP() throws Exception  {
+    	driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
+		Datacenter.click(); 
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[1]")));
+		Select dropdown = new Select(dropdownElementISP);
+		dropdown.selectByVisibleText("150 GB - $150");
+		try {
+			 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='size ng-star-inserted'])[1]")));
+			 String priceeString =  Price1.getText();
+			Assert.assertEquals(priceeString, "$1/GB");
+		} catch (Exception e) {
+		System.out.println(e);
+		}
+        }
 
+	@Test(priority = 12) 
+	void verify_dropdown_Price_changed_ISPplus() throws Exception  {
+		driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'ISP')]")));
+		Datacenter.click(); 
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
+		Select dropdown = new Select(dropdownElementISP);
+		dropdown.selectByVisibleText("200 IP, 8 TB - $300");				
+		WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='size ng-star-inserted'])[2]")));
+		String priceeString =  Price1.getText();
+		try {
+			Assert.assertEquals(priceeString, "$1.5/IP");
+			dropdown.selectByVisibleText("30 IP, 1 TB - $48");
+			String priceeString2 =  Price1.getText();
+			try {
+				Assert.assertEquals(priceeString2, "$1.6/IP");
+				dropdown.selectByVisibleText("50 IP, 2 TB - $80");
+				String priceeString3 =  Price1.getText();
 				try {
-					Assert.assertEquals(priceeString, "$0.25/GB");
-				} catch (Exception e) {
-					System.out.println(e);
-				}
-		        }
-			
-			@Test(priority = 14) 
-			void verify_dropdown_Price_changed_shareDC2() throws Exception  {
-				   driver.get(url2);
-					WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-					price.click();
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-					WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
-					Datacenter.click();   
-				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
-				Select dropdown = new Select(dropdownElementISP);
-				dropdown.selectByVisibleText("100 GB - $27");
-				
-				 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'$0.27/GB')]")));
-				 String priceeString =  Price1.getText();
-
-				try {
-					Assert.assertEquals(priceeString, "$0.27/GB");
-				} catch (Exception e) {
-					System.out.println(e);
-				}
-		        }
-			
-			@Test(priority = 15) 
-			void verify_dropdown_Price_changed_DedicatedDc() throws Exception  {  			
-				   driver.get(url2);
-					WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-					price.click();
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-					WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
-					Datacenter.click();   
-				WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[3]")));
-				Select dropdown = new Select(dropdownElementISP);
-				dropdown.selectByVisibleText("200 IP, 20 TB - $200");
-				
-				 WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'$1/IP')]")));
-				 String priceeString =  Price1.getText();
-					try {
-						Assert.assertEquals(priceeString, "$1/IP");
+					Assert.assertEquals(priceeString3, "$1.6/IP");
 					} catch (Exception e) {
 						System.out.println(e);
 					}
-					
-			}				
-		@Test(priority = 16) 
-		void verify_navigateTo_ISP_page_from_Product_Page() throws Exception  {  			
-			driver.get("https://dev.oculusproxies.com/products/isp");
-		
-			WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
-			dropdownElementISP.click();
-			
-			wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/premium?planType=isp_proxy"));
-			String actualURL = driver.getCurrentUrl();
- 			
-
-				try {
-					Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/premium?planType=isp_proxy");
 				} catch (Exception e) {
 					System.out.println(e);
 				}
-								
+			} catch (Exception e) {
+				System.out.println(e);
+			}			
+	}	
+	@Test(priority = 13) 
+	void verify_dropdown_Price_changed_sharedDC() throws Exception  {
+		driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
+		Datacenter.click();    	
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[2]")));
+		Select dropdown = new Select(dropdownElementISP);
+		dropdown.selectByVisibleText("200 GB - $50");				
+		WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'$0.25/GB')]")));
+		String priceeString =  Price1.getText();
+		try {
+			Assert.assertEquals(priceeString, "$0.25/GB");
+			dropdown.selectByVisibleText("30 GB - $9");	
+			String priceeString2 =  Price1.getText();					
+			try {
+				Assert.assertEquals(priceeString2, "$0.3/GB");
+				dropdown.selectByVisibleText("100 GB - $27");	
+				String priceeString3 =  Price1.getText();					
+				try {
+					Assert.assertEquals(priceeString3, "$0.27/GB");		
+				} catch (Exception e) {
+					System.out.println(e);
+				}
+			} catch (Exception e) {
+				System.out.println(e);
+			}					
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		@Test(priority = 17) 
-		void verify_navigateTo_ISPplus_from_Product_Page() throws Exception  {  			
-			driver.get("https://dev.oculusproxies.com/products/isp-plus");	
-			
-			WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
-			dropdownElementISP.click();
-			
-			wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/premium?planType=isp_plus_proxy"));
-			String actualURL = driver.getCurrentUrl();
- 			
-
-				try {
-					Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/premium?planType=isp_plus_proxy");
-				} catch (Exception e) {
-					System.out.println(e);
-				}
-					
+	}
+	@Test(priority = 15) 
+		void verify_dropdown_Price_changed_DedicatedDc() throws Exception  {  			
+		driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		WebElement Datacenter =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div//div[contains(text(),'Datacenter')]")));
+		Datacenter.click();   
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//select[@class='select-box'])[3]")));
+		Select dropdown = new Select(dropdownElementISP);
+		dropdown.selectByVisibleText("200 IP, 20 TB - $200");	
+		WebElement  Price1  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'$1/IP')]")));
+		String priceeString =  Price1.getText();
+		try {
+			Assert.assertEquals(priceeString, "$1/IP");
+		} catch (Exception e) {
+			System.out.println(e);
+		}		
+	}				
+	@Test(priority = 16) 
+	void verify_navigateTo_ISP_page_from_Product_Page() throws Exception  {  			
+		driver.get("https://dev.oculusproxies.com/products/isp");
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
+		dropdownElementISP.click();
+		wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/premium?planType=isp_proxy"));
+		String actualURL = driver.getCurrentUrl();	
+		try {
+			Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/premium?planType=isp_proxy");
+		} catch (Exception e) {
+			System.out.println(e);
+		}							
+		}
+	@Test(priority = 17) 
+	void verify_navigateTo_ISPplus_from_Product_Page() throws Exception  {  			
+		driver.get("https://dev.oculusproxies.com/products/isp-plus");			
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
+		dropdownElementISP.click();		
+		wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/premium?planType=isp_plus_proxy"));
+		String actualURL = driver.getCurrentUrl();
+		try {
+			Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/premium?planType=isp_plus_proxy");
+		} catch (Exception e) {
+			System.out.println(e);
 		}				
-		@Test(priority = 18) 
-		void verify_navigateTo_SharedDC_pricepage_from_Product_Page() throws Exception  {  			
-			driver.get("https://dev.oculusproxies.com/products/shared-dc");
-			
-			WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
-			dropdownElementISP.click();
-			
-			wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/sharedDC?planType=shared_dc"));
-			String actualURL = driver.getCurrentUrl();
- 			
-
-				try {
-					Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=shared_dc");
-				} catch (Exception e) {
-					System.out.println(e);
-				}
-					
-		}				
-		@Test(priority = 19) 
-		void verify_navigateTo_dedicatedDc_pricePage_from_Product_Page() throws Exception  {  			
-			driver.get("https://dev.oculusproxies.com/products/dedicated-dc");
-					
-			WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
-			dropdownElementISP.click();
-			
-			wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/sharedDC?planType=dedicated_dc"));
-			String actualURL = driver.getCurrentUrl();
- 			
-
-				try {
-					Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=dedicated_dc");
-				} catch (Exception e) {
-					System.out.println(e);
-				}
-								
-				
-		}				
+	}				
+	@Test(priority = 18) 
+	void verify_navigateTo_SharedDC_pricepage_from_Product_Page() throws Exception  {  			
+		driver.get("https://dev.oculusproxies.com/products/shared-dc");		
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
+		dropdownElementISP.click();			
+		wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/sharedDC?planType=shared_dc"));
+		String actualURL = driver.getCurrentUrl();
+		try {
+			Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=shared_dc");
+		} catch (Exception e) {
+			System.out.println(e);
+		}			
+	}				
+	@Test(priority = 19) 
+	void verify_navigateTo_dedicatedDc_pricePage_from_Product_Page() throws Exception  {  			
+		driver.get("https://dev.oculusproxies.com/products/dedicated-dc");			
+		WebElement  dropdownElementISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now ']")));
+		dropdownElementISP.click();	
+		wait.until(ExpectedConditions.urlContains("https://dev.oculusproxies.com/pricing/sharedDC?planType=dedicated_dc"));
+		String actualURL = driver.getCurrentUrl();
+		try {
+			Assert.assertEquals(actualURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=dedicated_dc");
+		} catch (Exception e) {
+			System.out.println(e);
+		}			
+	}				
 		@Test(priority = 20) 
 		void verify_navigateTo_LoginPage_from_Product_Page() throws Exception  {  			
-			driver.get("https://dev.oculusproxies.com/products/free");
-					
+			driver.get("https://dev.oculusproxies.com/products/free");			
 			WebElement  Try_now_for_free  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Try now for free ']")));
 			Try_now_for_free.click();
-			
 			WebElement  GET_STARTED  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Get started']")));
-			GET_STARTED.click();
-			
+			GET_STARTED.click();	
 			WebElement  dropdownElementISP2  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Login']")));
 			String actualString = dropdownElementISP2.getText();			
-
 				try {
 					Assert.assertEquals(actualString, "Login");
 				} catch (Exception e) {
 					System.out.println(e);
-				}	
-													
-    }
-		
+				}													
+    }	
 		@Test(priority = 20) 
 		void verify_liks_onSignUp_page_LOGINL_INK() throws Exception  {  
 			driver.get(url2);
 			WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup")));
-			signup.click();
-			
+			signup.click();	
 			WebElement  lg  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Log In']")));
-			lg.click();
-			
-
+			lg.click();		
 			wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/login"));
-				String currentURL = driver.getCurrentUrl();
-		
+				String currentURL = driver.getCurrentUrl();		
 				try {
 					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/login");
 				} catch (Exception e) {
 					System.out.println(e);
 				}	
-				driver.navigate().back();
-								
+				driver.navigate().back();							
 	}
-
-		@Test(priority = 21) 
-		void verify_navigate_To_SignUp_Page_From_LOGINL_Page() throws Exception  {  
-			driver.get(url2);
-			WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));
-			signup.click();
-
-			WebElement  SignUpNow  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Sign Up Now']")));
-			SignUpNow.click();
-
-				wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/register"));
-				String currentURL = driver.getCurrentUrl();
-		
-				try {
-					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/register");
-				} catch (Exception e) {
-					System.out.println(e);
-				}	
-									
+	@Test(priority = 21) 
+	void verify_navigate_To_SignUp_Page_From_LOGINL_Page() throws Exception  {  
+		driver.get(url2);
+		WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));
+		signup.click();
+		WebElement  SignUpNow  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Sign Up Now']")));
+		SignUpNow.click();
+		wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/register"));
+		String currentURL = driver.getCurrentUrl();				
+		try {
+			Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/register");
+			} catch (Exception e) {
+				System.out.println(e);
+			}									
+	}	
+	@Test(priority = 22) 
+	void verify_navigate_To_TAC_From_SIGNUP_Page()  {  
+		driver.get(url2);
+		WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup")));
+		signup.click();
+		String owindow = driver.getWindowHandle();		
+		WebElement  TAC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Terms and Conditions']")));
+		TAC.click();
+		for(String window:driver.getWindowHandles()) {
+			if(!window.equals(owindow)) {			
+				driver.switchTo().window(window);				
+			}				
+		}		
+			wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/terms_conditions"));
+			String currentURL = driver.getCurrentUrl();
+			try {
+				Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/terms_conditions");
+			} catch (Exception e) {
+				System.out.println(e);
+			}	
+			driver.close();
+			driver.switchTo().window(owindow);			
 	}
-		
-		
-		@Test(priority = 22) 
-		void verify_navigate_To_TAC_From_SIGNUP_Page()  {  
-			driver.get(url2);
-			WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup")));
-			signup.click();
-			String owindow = driver.getWindowHandle();
-			
-			WebElement  TAC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Terms and Conditions']")));
-			TAC.click();
-
-			for(String window:driver.getWindowHandles()) {
-			
-				if(!window.equals(owindow)) {
-					
-					driver.switchTo().window(window);				
-				}				
-			}		
-				wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/terms_conditions"));
-				String currentURL = driver.getCurrentUrl();
-		
-				try {
-					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/terms_conditions");
-				} catch (Exception e) {
-					System.out.println(e);
-				}	
-				driver.close();
-				driver.switchTo().window(owindow);			
-	}
-
-		@Test(priority = 23) 
-		void verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page() {  
-			driver.get(url2);
-			WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup")));
-			signup.click();
-			String owindow = driver.getWindowHandle();		
-			WebElement  TAC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Privacy Policy']")));
-			TAC.click();
-			for(String window:driver.getWindowHandles()) {		
-				if(!window.equals(owindow)) {			
-					driver.switchTo().window(window);				
-				}				
-			}		
-				wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/privacy_policy"));
-				String currentURL = driver.getCurrentUrl();		
-				try {
-					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/privacy_policy");
-				} catch (Exception e) {
-					System.out.println(e);
-				}	
-				driver.close();
-				driver.switchTo().window(owindow);			
-	}
-		
-		
-
+	@Test(priority = 23) 
+	void verify_navigate_To_PrivcyPolicy_From_SIGNUP_Page() {  
+		driver.get(url2);
+		WebElement  signup  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup")));
+		signup.click();
+		String owindow = driver.getWindowHandle();		
+		WebElement  TAC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Privacy Policy']")));
+		TAC.click();
+		for(String window:driver.getWindowHandles()) {		
+			if(!window.equals(owindow)) {			
+				driver.switchTo().window(window);				
+			}				
+		}		
+			wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/privacy_policy"));
+			String currentURL = driver.getCurrentUrl();		
+			try {
+				Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/privacy_policy");
+			} catch (Exception e) {
+				System.out.println(e);
+			}	
+			driver.close();
+			driver.switchTo().window(owindow);			
+}
 		@Test(priority = 24) 
 		void verify_navigate_To_forgotPass_From_LOGIN_Page()  {  
 			driver.get(url2);
@@ -630,11 +575,8 @@ public class SanityTestV3 extends BaseClass2{
 					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/forgotpassword");
 				} catch (Exception e) {
 					System.out.println(e);
-				}	
-									
-	}
-		
-		
+				}								
+	}		
 		@Test(priority = 25) 
 		void verify_navigate_To_SIGNUP_Page_From_ForgotPass_Page() {  
 			driver.get(url2);
@@ -646,7 +588,6 @@ public class SanityTestV3 extends BaseClass2{
 			SP.click();			
 				wait.until(ExpectedConditions.urlMatches("https://dev.oculusproxies.com/register"));
 				String currentURL = driver.getCurrentUrl();
-		
 				try {
 					Assert.assertEquals(currentURL, "https://dev.oculusproxies.com/register");
 				} catch (Exception e) {
@@ -658,72 +599,57 @@ public class SanityTestV3 extends BaseClass2{
 			driver.get(url2);
 			 WebElement  ISP  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='symbol'])[1]")));
 			 String ISPPrice=  ISP.getText().replace("\n", " ");    			
-
 			 try {
 				Assert.assertEquals(ISPPrice, "Starting from $1 /GB");
 			} catch (Exception e) {
 				System.out.println(e);
-			}
-			 
+			} 
 			 WebElement  ISPplus  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='symbol'])[2]")));
 			 String ISPplusPrice=  ISPplus.getText().replace("\n", " ");    			
-
 			 try {
 				Assert.assertEquals(ISPplusPrice, "Starting from $1.5 /IP");
 			} catch (Exception e) {
 				System.out.println(e);
-			}
-			 
+			}	 
 			 WebElement  SharedDC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='symbol'])[3]")));
 			 String SharedDCprice=  SharedDC.getText().replace("\n", " ");    			
-
 			 try {
 				Assert.assertEquals(SharedDCprice, "Starting from $0.25 /GB");
 			} catch (Exception e) {
 				System.out.println(e);
-			}
-			 
+			}	 
 			 WebElement  dedicatedDC  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='symbol'])[4]")));
 			 String dedicatedDCprice=  dedicatedDC.getText().replace("\n", " ");    			
-
 			 try {
 				Assert.assertEquals(dedicatedDCprice, "Starting from $1 /IP");
 			} catch (Exception e) {
 				System.out.println(e);
 			}	 
-	}
-		
+	}	
 		@Test(priority = 27) 
 		void verify_Discriptions_on_Product_Page_ISP() throws Exception  {
 			driver.get(url2);
 			// ISP
 			WebElement ProductDropdown1 =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='navbar-drop2']")));
 			ProductDropdown1.click();
-			
 			WebElement Static_residential_ISP =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//a[contains(text(),'ISP')])[1]")));
 			Static_residential_ISP.click();
-			
 			String Actualtxt=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//h4"))).getText();
-
 			 try {
 				Assert.assertEquals(Actualtxt, "High-Speed Static Residential Proxies from leading internet service providers (ISPs): Optimize Your Data Operations with Reliable, Fast Internet Protocol Services");
 			} catch (Exception e) {
 				System.out.println(e);
 			}	 
 	}
-
 		@Test(priority = 28) 
 		void verify_Discriptions_on_Product_Page_ISPplus() throws Exception  {
 			driver.get(url2);
-
 				WebElement ProductDropdown2 =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='navbar-drop2']")));
 				ProductDropdown2.click();
-			WebElement Static_residential_ISPplus =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a[contains(text(),'ISP Premium')]")));
-			Static_residential_ISPplus.click();
-			
-			String Actualtxt2=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//h4"))).getText();
-		
-			 try {
+				WebElement Static_residential_ISPplus =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//a[contains(text(),'ISP Premium')]")));
+				Static_residential_ISPplus.click();		
+				String Actualtxt2=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//h4"))).getText();		
+				try {
 				Assert.assertEquals(Actualtxt2, "Enhanced, US based, Static Residential Proxies from premium internet service providers (ISPs): Extend Your Scraping "
 						+ "Capabilities to Google Servers, Major Social Media Platforms, eCommerce, Events, Business and many other websites");
 			} catch (Exception e) {
@@ -737,9 +663,7 @@ public class SanityTestV3 extends BaseClass2{
 		ProductDropdown3.click();
 		WebElement SharedDc =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Shared Datacenter']")));
 		SharedDc.click();
-		
 		String Actualtxt3=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//h4"))).getText();
-
 		try {
 		Assert.assertEquals(Actualtxt3, "Cost-Effective Shared DC Proxies: Enhance Your Online Efficiency with Budget-"
 				+ "Friendly, Shared Datacenter Solutions");
@@ -754,31 +678,24 @@ public class SanityTestV3 extends BaseClass2{
 		ProductDropdown4.click();
 		WebElement DedicatedDC =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Dedicated Datacenter']")));
 		DedicatedDC.click();
-		
 		String Actualtxt4=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//h4"))).getText();
-		
 		try {
 			Assert.assertEquals(Actualtxt4, "Premium Dedicated DC Proxies: Secure Exclusive Proxy Usage for Your High-Volume, Sensitive Tasks");
 		} catch (Exception e) {
 			System.out.println(e);
 		}			
-}
-			
+}			
 	@Test(priority = 31)
 	void verify_naviagate_to_freeDataCenterPlanFromFAQ() throws Exception {
 		driver.get(url2);
 		WebElement TargateFAQ =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[normalize-space()='What is an ISP Proxy?']")));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
 		js.executeScript("arguments[0].scrollIntoView();",TargateFAQ );
-		
 		WebElement FAQ =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("label[for='faq-drawer4']")));
 		FAQ.click();
-		
 		WebElement GetTEXT =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Yes, after signup you "
 				+ "can get a free package of 5 ')]")));
-		String ActualTEXT = GetTEXT.getText();
-		
+		String ActualTEXT = GetTEXT.getText();	
 		try {
 			Assert.assertEquals(ActualTEXT, "Yes, after signup you can get a free package of 5 Datacenter IP’s with 100MB bandwidth, this plan is valid for 14 days.");
 		} catch (Exception e) {
@@ -820,8 +737,7 @@ public class SanityTestV3 extends BaseClass2{
 		GetTEXT.click();
 		Thread.sleep(3000);
 		String OWindow = driver.getWindowHandle();		
-		for(String window:driver.getWindowHandles()) {
-			
+		for(String window:driver.getWindowHandles()) {	
 			if(!window.equals(OWindow)) {
 				driver.switchTo().window(window);				
 				String curentURL =  driver.getCurrentUrl();				
@@ -839,11 +755,9 @@ public class SanityTestV3 extends BaseClass2{
 		driver.get(url2);
 		WebElement Scale_with_Security =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[normalize-space()='How do you price your proxies?']")));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
 		js.executeScript("arguments[0].scrollIntoView();",Scale_with_Security );
 		WebElement GetTEXT2 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[normalize-space()='Can I test my proxies?']")));
 		GetTEXT2.click();
-		
 		WebElement GetTEXT =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'https://support.oculusproxies.com/hc/en-us/article')]")));
 		GetTEXT.click();
 		String OWindow = driver.getWindowHandle();		
@@ -860,18 +774,15 @@ public class SanityTestV3 extends BaseClass2{
 				}					
 			}					
 		}				
-}	
-			
+}			
 	@Test(priority = 35)
 	void verify_Link_is_Functional_under_WherecanIgetproxiesforEvents() throws Exception {
 		driver.get(url2);
 		WebElement Scale_with_Security =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[normalize-space()='How do you price your proxies?']")));
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
+		JavascriptExecutor js = (JavascriptExecutor)driver;	
 		js.executeScript("arguments[0].scrollIntoView();",Scale_with_Security );
 		WebElement GetTEXT2 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[normalize-space()='Where can I get proxies for Events?']")));
-		GetTEXT2.click();
-		
+		GetTEXT2.click();	
 		WebElement GetTEXT =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='https://oculusproxies.com/legacy']")));
 		GetTEXT.click();
 		String OWindow = driver.getWindowHandle();		
@@ -907,25 +818,20 @@ public class SanityTestV3 extends BaseClass2{
 			}					
 		}
 	}
-	
 	@Test(priority =37)
 	void Verify_Residential_Proxy_Scraper_card() throws Exception {
 		driver.get(url2);
 		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
 		price.click();
 		WebElement cardTitle =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='plan-name f-21x'])[1]")));
-		String ActualcardTitle= cardTitle.getText();
-		
+		String ActualcardTitle= cardTitle.getText();	
 		try {
 			Assert.assertEquals(ActualcardTitle, "Residential Proxy Scraper");
 		} catch (Exception e) {
 			System.out.println(e);
-		}
-		
-		
+		}			
 		WebElement DefoultTitlePrice =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='size ng-star-inserted']")));
-		String actualprice=DefoultTitlePrice.getText();
-	
+		String actualprice=DefoultTitlePrice.getText();	
 		try {
 			Assert.assertEquals(actualprice, "$2.5/GB");
 		} catch (Exception e) {
@@ -949,5 +855,118 @@ public class SanityTestV3 extends BaseClass2{
 		    }		
 		}
 	}	
-	
+	@Test(priority =38)
+	void verify_price_get_changed_after_selected_plan() throws Exception {
+		driver.get(url2);
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		WebElement dropdown =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
+		Select abcSelect= new Select(dropdown);
+		abcSelect.selectByValue("83");
+		WebElement titlePrice =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='size ng-star-inserted']")));
+		String actualTxt = titlePrice.getText();
+		try {
+			Assert.assertEquals(actualTxt, "$2/GB");			
+			abcSelect.selectByValue("82");			
+			String actualTxt2 = titlePrice.getText();
+			try {
+				Assert.assertEquals(actualTxt2, "$2.5/GB");
+				abcSelect.selectByValue("81");				
+				String actualTxt3 = titlePrice.getText();
+				try {
+					Assert.assertEquals(actualTxt3, "$2.5/GB");
+				} catch (Exception e) {
+					System.out.println("price does not get changed "+e);
+				}
+			} catch (Exception e) {
+				System.out.println("price does not get changed "+e);
+			}		
+		} catch (Exception e) {
+			System.out.println("price does not get changed "+e);
+		}
+	}
+	@Test(priority =39)
+		void verify_footer_text_of_cards() throws Exception {
+		driver.get("https://dev.oculusproxies.com/pricing/residential");
+		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
+		price.click();
+		WebElement  Packagevalidfor3months  =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//span[text()=' Package valid for 3 months ']")));
+		String actuaString= Packagevalidfor3months.getText();		
+		try {
+			Assert.assertEquals(actuaString, "Package valid for 3 months");
+		} catch (Exception e) {
+			System.out.println(e);
+		}		
+		WebElement Datacenter =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//div[contains(text(),'Datacenter')]")));
+		Datacenter.click();   
+		WebElement FREEPLAN =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Package valid for 14-Day']")));
+		String actualTxt= FREEPLAN.getText();
+		try {
+			Assert.assertEquals(actualTxt,"Package valid for 14-Day");
+			WebElement FREEPLAN2 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Package valid for 3 months']")));
+			String actualTxt2= FREEPLAN2.getText();
+			try {
+				Assert.assertEquals(actualTxt2,"Package valid for 3 months");
+				WebElement FREEPLAN3 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Package valid for 1 month']")));
+				String actualTxt3= FREEPLAN3.getText();
+				try {
+					Assert.assertEquals(actualTxt3,"Package valid for 1 month");
+				} catch (Exception e) {
+					System.out.println(e);
+				}
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		WebElement ISP =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='tab'][normalize-space()='ISP']")));
+		ISP.click();   
+		WebElement FREEPLAN4 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Package valid for 3 months']")));
+		String actualTxt4= FREEPLAN4.getText();
+		try {
+			Assert.assertEquals(actualTxt4,"Package valid for 3 months");
+			WebElement FREEPLAN5 =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Package valid for 1 month']")));
+			String actualTxt5= FREEPLAN5.getText();
+			try {
+				Assert.assertEquals(actualTxt5,"Package valid for 1 month");
+			} catch (Exception e) {
+				System.out.println(e);
+				}			
+		} catch (Exception e) {
+			System.out.println(e);
+		}	
+	}	
+	@Test(priority =40)
+	void verify_free_Plan() throws Exception {
+		driver.get(url2);
+		WebElement TryNowForFree =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//button[text()=' Try now for free '])[1]")));
+		TryNowForFree.click();
+		String cURL = driver.getCurrentUrl();		
+		try {
+			Assert.assertEquals(cURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=free");		
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		WebElement GetStarted =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Get started ']")));
+		GetStarted.click();		
+		WebElement abcElement= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=' Your free plan was already used or has expired. ']")));
+		String acTEXT= abcElement.getText();
+		try {
+			Assert.assertEquals(acTEXT, "Your free plan was already used or has expired.");		
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		WebElement GoToMyProxies =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button//span[text()=' Go to My Proxies ']")));
+		GoToMyProxies.click();			
+		String cURL2 = driver.getCurrentUrl();	
+		try {
+			Assert.assertEquals(cURL2, "https://dev.oculusproxies.com/orders/ispProxy");		
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+		
+	}
 }

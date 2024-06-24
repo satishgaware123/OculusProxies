@@ -24,32 +24,38 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(oculus.utilities.listeners.class)
 
-public class justTest extends BaseClass2 {
+public class justTest extends BaseClass {
 	
-
-	@Test(priority =37)
-	void verify_price_get_changed_after_selected_larger_plan() throws Exception {
+	@Test(priority =38)
+	void verify_free_Plan() throws Exception {
 		driver.get(url2);
-		WebElement price =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/pricing']")));
-		price.click();
-
-		WebElement dropdown =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@class='select-box']")));
-		Select abcSelect= new Select(dropdown);
-		abcSelect.selectByValue("83");
-		
-		WebElement titlePrice =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='size ng-star-inserted']")));
-		String actualTxt = titlePrice.getText();
+		WebElement TryNowForFree =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div//button[text()=' Try now for free '])[1]")));
+		TryNowForFree.click();
+		String cURL = driver.getCurrentUrl();		
 		try {
-			Assert.assertEquals(actualTxt, "$0.25/GB");
+			Assert.assertEquals(cURL, "https://dev.oculusproxies.com/pricing/sharedDC?planType=free");		
 		} catch (Exception e) {
-			System.out.println("price does not get changed "+e);
+			System.out.println(e);
+		}
+		WebElement GetStarted =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()=' Get started ']")));
+		GetStarted.click();		
+		WebElement abcElement= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=' Your free plan was already used or has expired. ']")));
+		String acTEXT= abcElement.getText();
+		try {
+			Assert.assertEquals(acTEXT, "Your free plan was already used or has expired.");		
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		WebElement GoToMyProxies =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button//span[text()=' Go to My Proxies ']")));
+		GoToMyProxies.click();			
+		String cURL2 = driver.getCurrentUrl();	
+		try {
+			Assert.assertEquals(cURL2, "https://dev.oculusproxies.com/orders/ispProxy");		
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		
 		
-		
-		
-	
-				
-}	
-    
+	}	
+   
 }
